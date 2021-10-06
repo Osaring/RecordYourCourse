@@ -1,19 +1,16 @@
 const { app, BrowserWindow } = require('electron')
-const path = require('path')
 
 function createWindow () {
-  // Créer la fenêtre de navigation.
   try{
+    for (const dependency of ['chrome', 'node', 'electron']) {
+      console.log(`${dependency}-version : `, process.versions[dependency]);
+    }
     const win = new BrowserWindow({
       width: 800,
       height: 600,
-      webPreferences: {
-      preload: path.join(__dirname, './preload.js')
-      }
     })
     win.loadFile('./views/index.html')
-  }
-  catch(e){
+  } catch(e){
     console.log(e)
   }
 }
@@ -28,7 +25,7 @@ app.whenReady().then(() => {
   })
 })
 
-//Quitter quand toutes les fenêtres sont fermées, sauf sur macOS.
+// Quitter quand toutes les fenêtres sont fermées, sauf sur macOS.
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
 })
