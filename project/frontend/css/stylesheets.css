@@ -1,8 +1,23 @@
+.container-icon {
+    margin-top: 1%;
+    display:flex;
+    width: 65%;
+    margin-left: 0%;
+    justify-content: space-between;
 
+}
 .icon-ppt {
-    display: inline;
-    width: 150px;
-    height: 150px;
+    display: inline-block;
+    justify-content: space-between;
+}
+icon-ppt:hover {
+    opacity:0.7;
+}
+
+span {
+    float:right;
+    font-weight: bold;
+    margin-right: 13%;
 }
 
 .btn-stop {
@@ -16,7 +31,16 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 14px;
+
+    justify-content: space-between;margin-right:auto;margin-left:auto;
 }
 .btn-stop:hover{
     opacity:0.7;
+}
+
+h2 {
+    font-size: 36px;
+}
+h2 i {
+    font-size:36px;
 }

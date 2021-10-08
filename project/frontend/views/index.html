@@ -22,11 +22,14 @@
     <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
       <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
       <div class="w3-container">
-        <h3 class="w3-padding-64"><b>Record Your<br>Course</b></h3>
+        <h3 class="w3-padding-64"><b>Record Your<br>Courses</b>
+          <hr style="width:50px;border:5px solid white" class="w3-round">
+        </h3>
       </div>
       <div class="w3-bar-block">
         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
-        <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services<samp></samp></a>
+        <a href="#commandes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Commandes<samp></samp></a>
+        <a href="#videos-saved" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéos enregistrées</a>
         <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
       </div>
     </nav>
@@ -34,7 +37,7 @@
     <!-- Top menu on small screens -->
     <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
       <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-      <span>Record Your Course</span>
+      <span>Record Your Courses</span>
     </header>
 
     <!-- Overlay effect when opening sidebar on small screens -->
@@ -46,25 +49,38 @@
       <!-- Header -->
       <div class="w3-container" style="margin-top:80px" id="#">
         <h1 class="w3-jumbo"><b>Record Your Courses</b></h1>
-        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:2%"><b>Services.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <h1 id="commandes" class="w3-xxxlarge w3-text-red" style="margin-top:2%"><b>Commandes.</b>
+          <hr style="width:50px;border:5px solid red" class="w3-round">
+        </h1>
       </div>
 
       <!-- Enregistrement -->
       <div class="w3-container">
-        <h4 class="w3-xxxlarge w3-text-black"><b><i class="fa fa-play-circle-o" style="font-size:48px;color:black"></i> Enregistrer.</b></h4>
+        <h2 class="w3-xxxlarge w3-text-black"><b><i class="fa fa-play-circle-o"></i> Enregistrer.</b></h2>
       </div>
       <div class="w3-row-padding">
-        <div class="w3-half">
-          <img class="icon-ppt" src="./../images/IconLibreOffice.png" onclick="onClick(this)" alt="IconLibreOffice">
-          <img class="icon-ppt" src="./../images/IconAcrobatReader.png" onclick="onClick(this)" alt="IconAcrobatReader">
-          <img class="icon-ppt" src="./../images/IconPowerPoint.png" style="width:170px;height:170px" onclick="onClick(this)" alt="IconPowerPoint">
+        <div class="container-icon">
+          <div class="icon-ppt">
+            <img src="./../images/IconPowerPoint.png" style="width:160px;height:160px" onclick="onClick(this)" alt="IconPowerPoint">
+            <br>
+            <span>@PowerPoint</span>
+          </div>
+          <div class="icon-ppt">
+            <img src="./../images/IconLibreOffice.png" style="width:160px;height:160px" onclick="onClick(this)" alt="IconLibreOffice">
+            <br>
+            <span>@LibreOffice</span></img>
+          </div>
+          <div class="icon-ppt">
+            <img src="./../images/IconAcrobatReader.png" style="width:160px;height:160px" onclick="onClick(this)" alt="IconAcrobatReader">
+            <br>
+            <span>@AcrobatReader</span>
+          </div>
         </div>
       </div>
 
       <!-- Arrêter -->
       <div class="w3-container">
-        <h4 class="w3-xxxlarge w3-text-black" style="margin-top:20px"><b><i class="fa fa-play-circle-o" style="font-size:48px;color:black"></i> Arrêter.</b></h4>
+        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:20px"><b><i class="fa fa-stop-circle-o"></i> Arrêter.</b></h2>
       </div>
 
       <div class="w3-row-padding">
@@ -90,7 +106,7 @@
         </div>
       </div>
 
-      <!-- Services -->
+      <!-- Commandes -->
       <div class="w3-container" id="" style="margin-top:20px">
         <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
         <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -103,13 +119,13 @@
       <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
 
       <!-- Header -->
-      <div class="w3-container" style="margin-top:60px" id="#">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Vidéos enregistrées.</b></h1>
+      <div class="w3-container" style="margin-top:20px" id="#">
+        <h1 id="videos-saved" class="w3-xxxlarge w3-text-red"><b>Vidéos enregistrées.</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
       </div>
 
       <!-- Videos saved-->
-      <div class="w3-row-padding w3-grayscale" style="margin-top:5%">
+      <div class="w3-row-padding w3-grayscale" style="margin-top:3%">
         <div class="w3-col m4 w3-margin-bottom">
           <div class="w3-light-grey">
             <img src="/w3images/team2.jpg" alt="John" style="width:100%">
@@ -146,7 +162,7 @@
       <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
 
       <!-- Contact -->
-      <div class="w3-container" id="contact" style="margin-top:40px">
+      <div class="w3-container" id="contact" style="margin-top:20px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
         <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
@@ -171,7 +187,7 @@
     </div>
 
     <!-- W3.CSS Container -->
-    <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:60px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+    <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:60px;padding-right:58px"><p class="w3-right">Logiciel créé par <a href="" title="" target="_blank" class="w3-hover-opacity">des étudiants en M2 MIAGE</a></p></div>
 
     <script>
     // Script to open and close sidebar
