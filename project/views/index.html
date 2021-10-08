@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Test de record</title>
+</head>
+
+<body>
+  <h1>Hello World!</h1>
+  Nous utilisons Node.js <span id="node-version"></span>,
+  Chromium <span id="chrome-version"></span>,
+  et Electron <span id="electron-version"></span>.
+  <form>
+    <input type="button" value="Démarrer la machine" onclick=>
+  </form>
+  <p>La machine est arrêtée.</p>
+
+  <video id="gum" playsinline autoplay muted></video>
+  <video id="recorded" playsinline loop></video>
+
+  <div>
+    <button id="start">Start camera</button>
+    <button id="record" disabled>Start Recording</button>
+    <button id="play" disabled>Play</button>
+    <button id="download" disabled>Download</button>
+  </div>
+</body>
+
 </html>
