@@ -16,12 +16,13 @@ recordButton.addEventListener('click', () => {
   } else {
     stopRecording();
     recordButton.textContent = 'Start Recording';
-    playButton.disabled = false;
+    // playButton.disabled = false;
     downloadButton.disabled = false;
     codecPreferences.disabled = false;
   }
 });
 
+/*
 const playButton = document.querySelector('button#play');
 playButton.addEventListener('click', () => {
   const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value.split(';', 1)[0];
@@ -32,6 +33,7 @@ playButton.addEventListener('click', () => {
   recordedVideo.controls = true;
   recordedVideo.play();
 });
+*/
 
 const downloadButton = document.querySelector('button#download');
 downloadButton.addEventListener('click', () => {
@@ -83,7 +85,7 @@ function startRecording() {
 
   console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
   recordButton.textContent = 'Stop Recording';
-  playButton.disabled = true;
+  // playButton.disabled = true;
   downloadButton.disabled = true;
   codecPreferences.disabled = true;
   mediaRecorder.onstop = (event) => {
@@ -97,6 +99,8 @@ function startRecording() {
 
 function stopRecording() {
   mediaRecorder.stop();
+  const gumVideo = document.querySelector('video#gum');
+  gumVideo.srcObject = null;
 }
 
 function handleSuccess(stream) {
@@ -126,8 +130,8 @@ async function init(constraints) {
   }
 }
 
-document.querySelector('button#start').addEventListener('click', async () => {
-  document.querySelector('button#start').disabled = true;
+document.querySelector('img#button-start').addEventListener('click', async () => {
+  document.querySelector('img#button-start').disabled = true;
   const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
   const constraints = {
     audio: {

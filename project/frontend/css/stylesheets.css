@@ -26,6 +26,7 @@ span {
     color: white;
     font-weight: bold;
     padding: 10px 30px;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -45,35 +46,37 @@ h2 i {
     font-size:36px;
 }
 
+img:hover {
+    opacity: 0.8;
+}
 
-/* css valentin */
+
+
+
+
+/* css valentin à revoir */
 button {
     margin: 0 3px 10px 0;
     padding-left: 2px;
     padding-right: 2px;
     width: 99px;
-  }
-  
-  button:last-of-type {
+}
+
+button:last-of-type {
     margin: 0;
-  }
-  
-  p.borderBelow {
-    margin: 0 0 20px 0;
-    padding: 0 0 20px 0;
-  }
-  
-  video {
+}
+
+video {
     vertical-align: top;
     --width: 25vw;
     width: var(--width);
     height: calc(var(--width) * 0.5625);
-  }
-  
-  video:last-of-type {
+}
+
+video:last-of-type {
     margin: 0 0 20px 0;
-  }
-  
-  video#gumVideo {
+}
+
+video#gumVideo {
     margin: 0 20px 20px 0;
-  }
+}
