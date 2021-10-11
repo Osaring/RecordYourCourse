@@ -54,28 +54,39 @@
         </h1>
       </div>
 
+
       <!-- Enregistrement -->
       <div class="w3-container">
         <h2 class="w3-xxxlarge w3-text-black"><b><i class="fa fa-play-circle-o"></i> Enregistrer.</b></h2>
       </div>
       <div class="w3-row-padding">
+
+        <div>
+          > Cliquer sur votre support de présentation pour lancer : Camera / Audio / Screen
+        </div>
+
         <div class="container-icon">
           <div class="icon-ppt">
-            <img src="./../images/IconPowerPoint.png" style="width:160px;height:160px" onclick="onClick(this)" alt="IconPowerPoint">
-            <br>
+              <img id="button-start" src="./../images/IconPowerPoint.png" style="width:160px;height:160px" onclick="" alt="IconPowerPoint">
+              <br>
             <span>@PowerPoint</span>
-          </div>
-          <div class="icon-ppt">
-            <img src="./../images/IconLibreOffice.png" style="width:160px;height:160px" onclick="onClick(this)" alt="IconLibreOffice">
             <br>
-            <span>@LibreOffice</span></img>
           </div>
           <div class="icon-ppt">
-            <img src="./../images/IconAcrobatReader.png" style="width:160px;height:160px" onclick="onClick(this)" alt="IconAcrobatReader">
+            <img id="button-start" src="./../images/IconLibreOffice.png" style="width:160px;height:160px" onclick="" alt="IconLibreOffice">
+            <br>
+            <span>@LibreOffice</span>
+          </div>
+          <div class="icon-ppt">
+            <img id="button-start" src="./../images/IconAcrobatReader.png" style="width:160px;height:160px" onclick="" alt="IconAcrobatReader">
             <br>
             <span>@AcrobatReader</span>
           </div>
         </div>
+        <!-- camera zone -->
+        <br>
+        <video id="gum" playsinline autoplay muted></video>
+        <video id="recorded" playsinline loop></video>
       </div>
 
       <!-- Arrêter -->
@@ -85,8 +96,23 @@
 
       <div class="w3-row-padding">
         <div class="w3-half">
-          <button class="btn-stop" onclick="">Arrêter</button>
-          <button class="btn-stop" onclick="">Pause</button>
+
+          <div>
+            <button class="btn-stop" id="record" disabled>Start Recording</button>
+            <button class="btn-stop" id="download" disabled>Download</button>
+          </div>
+          <br>
+          <div>
+              Recording format: <select id="codecPreferences" disabled></select>
+          </div>
+          <div>
+              <h4>Media Stream Constraints options</h4>
+              <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+          </div>
+          <div>
+              <span id="errorMsg"></span>
+          </div>
+
         </div>
       </div>
 
@@ -208,7 +234,14 @@
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
     }
+
     </script>
+
+    <!-- include adapter for srcObject shim -->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="../../backend/js/recordCamera.js"></script>
+    <script src="../../backend/js/recordScreen.js"></script>
+
 
   </body>
 </html>
