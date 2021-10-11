@@ -4,7 +4,8 @@
   "description": "***\r ```\r $ git clone \r $ cd ./.../\r $ npm i\r $ ...\r ```",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --exec npx electron ."
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "devDependencies": {},
   "dependencies": {
     "electron": "^15.1.1"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.13"
   }
 }
