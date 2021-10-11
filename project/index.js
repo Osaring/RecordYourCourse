@@ -9,7 +9,7 @@ function createWindow () {
       width: 800,
       height: 600,
     })
-    win.loadFile('./frontend/views/index.html')
+    win.loadFile('./views/index.html')
   } catch(e){
     console.log(e)
   }
