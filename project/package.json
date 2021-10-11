@@ -17,7 +17,8 @@
     "url": "https://github.com/Osaring/RecordYourCourse/issues"
   },
   "homepage": "https://github.com/Osaring/RecordYourCourse#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "electron": "^15.1.1"
   },
   "dependencies": {
