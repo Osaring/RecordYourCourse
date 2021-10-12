@@ -2,15 +2,15 @@
 
 /* globals MediaRecorder */
 
-let mediaRecorder;
-let recordedBlobs;
+var mediaRecorder;
+var recordedBlobs;
 
 const codecPreferences = document.querySelector('#codecPreferences');
 
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const stopRecordButton = document.querySelector('button#stop-record');
-
+const downloadButton = document.querySelector('button#download');
 
 // event init && start record
 document.querySelector('img#button-start').addEventListener('click', async () => {
@@ -35,6 +35,7 @@ stopRecordButton.addEventListener('click', () => {
     downloadButton.disabled = false;
     codecPreferences.disabled = false;
 });
+
 function stopRecording() {
   mediaRecorder.stop();
   const gumVideo = document.querySelector('video#gum');
@@ -44,10 +45,11 @@ function stopRecording() {
 }
 
 function closeWebcamConnection(){
-  this.localStream.stop();
-}
+  stream.getTracks().forEach(function(track) {
+    track.stop();
+  });}
 
-const downloadButton = document.querySelector('button#download');
+// download record
 downloadButton.addEventListener('click', () => {
   const blob = new Blob(recordedBlobs, {type: 'video/webm'});
   const url = window.URL.createObjectURL(blob);
