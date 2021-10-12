@@ -1,3 +1,7 @@
+// Save pour zoom sur la vidéo en ouvrant une nouvelle fenetre
+// window.open("exit.html", "Thanks for Visiting!");
+
+
 'use strict';
 
 /* globals MediaRecorder */
@@ -14,6 +18,15 @@ const downloadButton = document.querySelector('button#download');
 
 // event init && start record
 document.querySelector('img#button-start').addEventListener('click', async () => {
+
+  // Confirm Record Message
+  if (window.confirm("Confirmez pour lancer la caméra et l'enregistrement")) {
+    alert("Lancement du programme");
+  }else{
+    alert("Arrêt du programme");
+    return;
+  }
+
   document.querySelector('img#button-start').disabled = true;
   const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
   const constraints = {
@@ -47,7 +60,8 @@ function stopRecording() {
 function closeWebcamConnection(){
   stream.getTracks().forEach(function(track) {
     track.stop();
-  });}
+  })
+}
 
 // download record
 downloadButton.addEventListener('click', () => {
@@ -85,7 +99,6 @@ function getSupportedMimeTypes() {
   });
 }
 
-
 async function init(constraints) {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -95,7 +108,6 @@ async function init(constraints) {
     errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
   }
 }
-
 
 function startRecording() {
   recordedBlobs = [];
