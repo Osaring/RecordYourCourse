@@ -9,31 +9,43 @@ const codecPreferences = document.querySelector('#codecPreferences');
 
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
-const recordButton = document.querySelector('button#record');
-recordButton.addEventListener('click', () => {
-  if (recordButton.textContent === 'Start Recording') {
-    startRecording();
-  } else {
-    stopRecording();
-    recordButton.textContent = 'Start Recording';
-    // playButton.disabled = false;
-    downloadButton.disabled = false;
-    codecPreferences.disabled = false;
-  }
+const stopRecordButton = document.querySelector('button#stop-record');
+
+
+// event init && start record
+document.querySelector('img#button-start').addEventListener('click', async () => {
+  document.querySelector('img#button-start').disabled = true;
+  const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
+  const constraints = {
+    audio: {
+      echoCancellation: {exact: hasEchoCancellation}
+    },
+    video: {
+      width: 1280, height: 720
+    }
+  };
+  console.log('Using media constraints:', constraints);
+  await init(constraints);
+  await startRecording();
 });
 
-/*
-const playButton = document.querySelector('button#play');
-playButton.addEventListener('click', () => {
-  const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value.split(';', 1)[0];
-  const superBuffer = new Blob(recordedBlobs, {type: mimeType});
-  recordedVideo.src = null;
-  recordedVideo.srcObject = null;
-  recordedVideo.src = window.URL.createObjectURL(superBuffer);
-  recordedVideo.controls = true;
-  recordedVideo.play();
+// event stop record
+stopRecordButton.addEventListener('click', () => {
+    stopRecording();
+    downloadButton.disabled = false;
+    codecPreferences.disabled = false;
 });
-*/
+function stopRecording() {
+  mediaRecorder.stop();
+  const gumVideo = document.querySelector('video#gum');
+  gumVideo.srcObject = null;
+  stopRecordButton.hidden = true;
+  closeWebcamConnection();
+}
+
+function closeWebcamConnection(){
+  this.localStream.stop();
+}
 
 const downloadButton = document.querySelector('button#download');
 downloadButton.addEventListener('click', () => {
@@ -51,6 +63,7 @@ downloadButton.addEventListener('click', () => {
   }, 100);
 });
 
+// save video in array recordedBlobs
 function handleDataAvailable(event) {
   console.log('handleDataAvailable', event);
   if (event.data && event.data.size > 0) {
@@ -70,6 +83,18 @@ function getSupportedMimeTypes() {
   });
 }
 
+
+async function init(constraints) {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    console.error('navigator.getUserMedia error:', e);
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+
 function startRecording() {
   recordedBlobs = [];
   const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value;
@@ -84,7 +109,6 @@ function startRecording() {
   }
 
   console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
-  recordButton.textContent = 'Stop Recording';
   // playButton.disabled = true;
   downloadButton.disabled = true;
   codecPreferences.disabled = true;
@@ -97,14 +121,8 @@ function startRecording() {
   console.log('MediaRecorder started', mediaRecorder);
 }
 
-function stopRecording() {
-  mediaRecorder.stop();
-  const gumVideo = document.querySelector('video#gum');
-  gumVideo.srcObject = null;
-}
-
 function handleSuccess(stream) {
-  recordButton.disabled = false;
+  stopRecordButton.hidden = false;
   console.log('getUserMedia() got stream:', stream);
   window.stream = stream;
 
@@ -119,28 +137,3 @@ function handleSuccess(stream) {
   });
   codecPreferences.disabled = false;
 }
-
-async function init(constraints) {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
-    handleSuccess(stream);
-  } catch (e) {
-    console.error('navigator.getUserMedia error:', e);
-    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
-  }
-}
-
-document.querySelector('img#button-start').addEventListener('click', async () => {
-  document.querySelector('img#button-start').disabled = true;
-  const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
-  const constraints = {
-    audio: {
-      echoCancellation: {exact: hasEchoCancellation}
-    },
-    video: {
-      width: 1280, height: 720
-    }
-  };
-  console.log('Using media constraints:', constraints);
-  await init(constraints);
-});
