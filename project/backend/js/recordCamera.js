@@ -1,33 +1,57 @@
-// Save pour zoom sur la vidéo en ouvrant une nouvelle fenetre
+// Pourra être utile pour zoom sur la vidéo dans une une nouvelle fenetre (à voir plus tard)
 // window.open("exit.html", "Thanks for Visiting!");
-
-
 'use strict';
 
 /* globals MediaRecorder */
-
 var mediaRecorder;
 var recordedBlobs;
 
 const codecPreferences = document.querySelector('#codecPreferences');
-
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const stopRecordButton = document.querySelector('button#stop-record');
 const downloadButton = document.querySelector('button#download');
+// buttons Start
+const startRecordPPT = document.querySelector('img#button-start-PPT');
+const startRecordLO = document.querySelector('img#button-start-LO');
+const startRecordAR = document.querySelector('img#button-start-AR');
 
-// event init && start record
-document.querySelector('img#button-start').addEventListener('click', async () => {
 
+
+startRecordPPT.addEventListener('click', async () => {
+  if (startRecordPPT.disabled) { alert("Un enregistrement est déjà en cours."); return; };
+  startRecordPPT.disabled = true;
+  startRecordLO.disabled = true;
+  startRecordAR.disabled = true;
+  importPPTandConvertSlides(); //todo
+  await parameters();
+});
+startRecordLO.addEventListener('click', async () => {
+  if (startRecordLO.disabled) { alert("Un enregistrement est déjà en cours."); return; };
+  startRecordLO.disabled = true;
+  startRecordPPT.disabled = true;
+  startRecordAR.disabled = true;
+  await parameters();
+});
+startRecordAR.addEventListener('click', async () => {
+  if (startRecordAR.disabled) { alert("Un enregistrement est déjà en cours."); return; };
+  startRecordAR.disabled = true;
+  startRecordPPT.disabled = true;
+  startRecordLO.disabled = true;
+  await parameters();
+});
+
+
+
+async function parameters() {
   // Confirm Record Message
-  if (window.confirm("Confirmez pour lancer la caméra et l'enregistrement")) {
+  if (window.confirm("Confirmer pour lancer la caméra et l'enregistrement")) {
     alert("Lancement du programme");
   }else{
     alert("Arrêt du programme");
     return;
   }
 
-  document.querySelector('img#button-start').disabled = true;
   const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
   const constraints = {
     audio: {
@@ -37,16 +61,21 @@ document.querySelector('img#button-start').addEventListener('click', async () =>
       width: 1280, height: 720
     }
   };
+
   console.log('Using media constraints:', constraints);
   await init(constraints);
-  await startRecording();
-});
+  startRecording();
+};
 
 // event stop record
 stopRecordButton.addEventListener('click', () => {
     stopRecording();
     downloadButton.disabled = false;
     codecPreferences.disabled = false;
+    // button start activation
+    startRecordPPT.disabled = false;
+    startRecordLO.disabled = false;
+    startRecordAR.disabled = false;
 });
 
 function stopRecording() {
@@ -56,14 +85,12 @@ function stopRecording() {
   stopRecordButton.hidden = true;
   closeWebcamConnection();
 }
-
 function closeWebcamConnection(){
   stream.getTracks().forEach(function(track) {
     track.stop();
   })
 }
 
-// download record
 downloadButton.addEventListener('click', () => {
   const blob = new Blob(recordedBlobs, {type: 'video/webm'});
   const url = window.URL.createObjectURL(blob);
@@ -123,7 +150,6 @@ function startRecording() {
   }
 
   console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
-  // playButton.disabled = true;
   downloadButton.disabled = true;
   codecPreferences.disabled = true;
   mediaRecorder.onstop = (event) => {
@@ -150,4 +176,10 @@ function handleSuccess(stream) {
     codecPreferences.appendChild(option);
   });
   codecPreferences.disabled = false;
+}
+
+
+// func import
+function importPPTandConvertSlides() {
+  return;
 }
