@@ -87,7 +87,7 @@
         <!-- camera zone -->
         <br>
         <video id="gum" playsinline autoplay muted></video>
-        <video id="recorded" playsinline loop></video>
+        <video id="recorded" playsinline></video>
       </div>
 
       <!-- Arrêter -->
@@ -185,6 +185,9 @@
         </div>
       </div>
 
+      <button id="test">test</button>
+
+
       <!-- W3.CSS Container -->
       <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
 
@@ -240,7 +243,10 @@
 
     <!-- include adapter for srcObject shim -->
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="./../../backend/js/convertFormat/index.js"></script>
+
     <script src="../../backend/js/recordCamera.js"></script>
+
 
   </body>
 </html>

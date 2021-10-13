@@ -6,9 +6,10 @@
 var mediaRecorder;
 var recordedBlobs;
 
+
 const codecPreferences = document.querySelector('#codecPreferences');
 const errorMsgElement = document.querySelector('span#errorMsg');
-const recordedVideo = document.querySelector('video#recorded');
+const recordedVideo = document.querySelector('#recorded');
 const stopRecordButton = document.querySelector('button#stop-record');
 const downloadButton = document.querySelector('button#download');
 // buttons Start
@@ -16,14 +17,12 @@ const startRecordPPT = document.querySelector('img#button-start-PPT');
 const startRecordLO = document.querySelector('img#button-start-LO');
 const startRecordAR = document.querySelector('img#button-start-AR');
 
-
-
 startRecordPPT.addEventListener('click', async () => {
   if (startRecordPPT.disabled) { alert("Un enregistrement est déjà en cours."); return; };
   startRecordPPT.disabled = true;
   startRecordLO.disabled = true;
   startRecordAR.disabled = true;
-  importPPTandConvertSlides(); //todo
+  // openFinder(path.resolve(__dirname)); //todo
   await parameters();
 });
 startRecordLO.addEventListener('click', async () => {
@@ -40,8 +39,6 @@ startRecordAR.addEventListener('click', async () => {
   startRecordLO.disabled = true;
   await parameters();
 });
-
-
 
 async function parameters() {
   // Confirm Record Message
@@ -66,7 +63,6 @@ async function parameters() {
   await init(constraints);
   startRecording();
 };
-
 // event stop record
 stopRecordButton.addEventListener('click', () => {
     stopRecording();
@@ -180,6 +176,21 @@ function handleSuccess(stream) {
 
 
 // func import
-function importPPTandConvertSlides() {
-  return;
+
+function openFinder(dirPath) {
+  let command = '';
+  console.log(process.platform)
+  switch (process.platform) {
+    case 'darwin':
+      command = 'open';
+      break;
+    case 'win32':
+      command = 'explore';
+      break;
+    default:
+      command = 'xdg-open';
+      break;
+  }
+  console.log('execSync', `${command} "${dirPath}"`);
+  return execSync(`${command} "${dirPath}"`);
 }
