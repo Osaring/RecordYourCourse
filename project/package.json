@@ -17,9 +17,8 @@
     "url": "https://github.com/Osaring/RecordYourCourse/issues"
   },
   "homepage": "https://github.com/Osaring/RecordYourCourse#readme",
-  "devDependencies": {},
   "dependencies": {
-    "nodejs-pptx": "^1.0.1",
+    "electron": "^15.1.2",
     "nodemon": "^2.0.13"
   }
 }
