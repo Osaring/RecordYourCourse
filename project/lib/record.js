@@ -1,11 +1,9 @@
-// Pourra être utile pour zoom sur la vidéo dans une une nouvelle fenetre (à voir plus tard)
-// window.open("exit.html", "Thanks for Visiting!");
-'use strict';
+import { one } from "./importFile/importPPT.js";
+// alert(one); // works well
 
 /* globals MediaRecorder */
 var mediaRecorder;
 var recordedBlobs;
-
 
 const codecPreferences = document.querySelector('#codecPreferences');
 const errorMsgElement = document.querySelector('span#errorMsg');
@@ -172,25 +170,4 @@ function handleSuccess(stream) {
     codecPreferences.appendChild(option);
   });
   codecPreferences.disabled = false;
-}
-
-
-// func import
-
-function openFinder(dirPath) {
-  let command = '';
-  console.log(process.platform)
-  switch (process.platform) {
-    case 'darwin':
-      command = 'open';
-      break;
-    case 'win32':
-      command = 'explore';
-      break;
-    default:
-      command = 'xdg-open';
-      break;
-  }
-  console.log('execSync', `${command} "${dirPath}"`);
-  return execSync(`${command} "${dirPath}"`);
 }

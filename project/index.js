@@ -1,17 +1,19 @@
 const { app, BrowserWindow } = require('electron')
 
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
+
 function createWindow () {
   try{
     for (const dependency of ['chrome', 'node', 'electron']) {
       console.log(`${dependency}-version : `, process.versions[dependency]);
     }
     const win = new BrowserWindow({
-      width: 800,
-      height: 600,
+      width: 1100,
+      height: 900,
     })
     win.loadFile('./frontend/views/index.html')
-  } catch(e){
-    console.log(e)
+  } catch(error){
+    console.log(error)
   }
 }
 
