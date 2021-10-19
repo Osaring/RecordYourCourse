@@ -2,6 +2,7 @@
 // window.open("exit.html", "Thanks for Visiting!");
 'use strict';
 
+
 /* globals MediaRecorder */
 var mediaRecorder;
 var recordedBlobs;
@@ -22,8 +23,8 @@ startRecordPPT.addEventListener('click', async () => {
   if (startRecordPPT.disabled) { alert("Un enregistrement est déjà en cours."); return; };
   startRecordPPT.disabled = true;
   startRecordLO.disabled = true;
-  startRecordAR.disabled = true;
-  importPPTandConvertSlides(); //todo
+  startRecordAR.disabled = true;  
+ //todo
   await parameters();
 });
 startRecordLO.addEventListener('click', async () => {
