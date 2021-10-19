@@ -56,6 +56,8 @@
         <h2 class="w3-xxxlarge w3-text-black"><b><i class="fa fa-play-circle-o"></i> Enregistrer.</b></h2>
       </div>
       <div class="w3-row-padding">
+        <!-- input for import file -->
+        <input type="file" id="file" hidden>
         <div>
           > Cliquer sur votre support de présentation pour lancer : Camera / Audio / Screen
         </div>
@@ -78,6 +80,7 @@
             <span>@AcrobatReader</span>
           </div>
         </div>
+
         <!-- Camera zone -->
         <br>
         <video id="gum" playsinline autoplay muted></video>
@@ -91,12 +94,12 @@
       <div class="w3-row-padding">
         <div class="w3-half">
           <div>
-            <button class="btn-stop" id="stop-record" hidden>Stop Recording</button>
-            <button class="btn-stop" id="download" disabled>Download</button>
+            <button class="btn-stop" id="stop-record" hidden>Stop Enregistrement</button>
+            <button class="btn-stop" id="download" disabled>Télécharger</button>
           </div>
           <br>
           <div>
-              Sélectionner le format de la vidéo : <select id="codecPreferences" disabled></select>
+              Sélectionner le format de la dernière vidéo créée: <select id="codecPreferences" disabled></select>
           </div>
           <div>
               <h4>Media Stream Constraints options</h4>
@@ -221,7 +224,7 @@
     </script>
     <!-- include adapter for srcObject shim -->
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script type="module" src="../../lib/record.js"></script>
+    <script type="module" src="../../lib/record/record.js"></script>
     <script type="module" src="../../lib/importFile/importPPT.js"></script>
 
   </body>

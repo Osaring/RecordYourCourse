@@ -8,8 +8,8 @@ function createWindow () {
       console.log(`${dependency}-version : `, process.versions[dependency]);
     }
     const win = new BrowserWindow({
-      width: 1100,
-      height: 900,
+      width: 1000,
+      height: 800,
     })
     win.loadFile('./frontend/views/index.html')
   } catch(error){
@@ -17,7 +17,7 @@ function createWindow () {
   }
 }
 
-// Cette méthode sera appelée quand Electron aura fini de s'initialiser
+// Méthode appelée quand Electron a fini de s'initialiser
 app.whenReady().then(() => {
   createWindow()
   app.on('activate', function () {
