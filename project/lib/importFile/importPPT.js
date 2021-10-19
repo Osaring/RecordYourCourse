@@ -13,10 +13,17 @@ function importPresentation() {
 
         // dézipper le ppt pour avoir le xml
 
+        getXMLFile(file);
+
         if (file === "") return "";
         else return file.name;
 
     })
 }
 
-export { importPresentation };
+function getXMLFile(file) {
+
+    return null;
+}
+
+export { importPresentation, getXMLFile };
