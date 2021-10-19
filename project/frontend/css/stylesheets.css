@@ -38,6 +38,13 @@ span {
 .btn-stop:hover{
     opacity:0.7;
 }
+.btn-stop:disabled{
+    opacity:0.4;
+}
+.btn-download-record-format:disabled{
+    opacity:0.4;
+}
+
 
 h2 {
     font-size: 36px;
@@ -49,8 +56,6 @@ h2 i {
 img:hover {
     opacity: 0.8;
 }
-
-
 
 
 

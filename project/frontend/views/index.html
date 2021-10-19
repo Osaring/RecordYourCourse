@@ -80,39 +80,49 @@
             <span>@AcrobatReader</span>
           </div>
         </div>
-
         <!-- Camera zone -->
         <br>
         <video id="gum" playsinline autoplay muted></video>
         <video id="recorded" playsinline></video>
-      </div>
-
-      <!-- Arrêter -->
-      <div class="w3-container">
-        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:20px"><b><i class="fa fa-stop-circle-o"></i> Arrêter.</b></h2>
-      </div>
-      <div class="w3-row-padding">
-        <div class="w3-half">
+        <!-- echo cancellation -->
+        <div>
           <div>
-            <button class="btn-stop" id="stop-record" hidden>Stop Enregistrement</button>
-            <button class="btn-stop" id="download" disabled>Télécharger</button>
-          </div>
-          <br>
-          <div>
-              Sélectionner le format de la dernière vidéo créée: <select id="codecPreferences" disabled></select>
-          </div>
-          <div>
-              <h4>Media Stream Constraints options</h4>
-              <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+            <h5>Media Stream Constraints options</h5>
+            <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
           </div>
           <div>
               <span id="errorMsg"></span>
           </div>
         </div>
+
+      </div>
+
+      <!-- Arrêter -->
+      <div class="w3-container">
+        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:15px"><b><i class="fa fa-stop-circle-o"></i> Arrêter.</b></h2>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <div>
+            <div id="record-in-progress" style="margin-bottom:5px; color:red; font-weight:bold;" hidden>> L'enregistrement est en cours</div>
+            <button class="btn-stop" id="stop-record" disabled>Stop Enregistrement</button>
+            <button class="btn-stop" id="download" disabled>Télécharger</button>
+          </div>
+          <br>
+
+          <div>
+            <div class="btn-download-record-format" id="download-record-format" disabled>
+              <h5>Sélectionner le format de la dernière vidéo créée :</h5>
+              <select id="codecPreferences" disabled></select>
+              <br>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
 
       <!-- Modal for full size images on click-->
       <div class="w3-container" style="margin-top:30px" id="">
@@ -137,7 +147,7 @@
       </div>
 
       <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
 
       <!-- Header -->
       <div class="w3-container" style="margin-top:20px" id="#">
@@ -183,7 +193,7 @@
 
 
       <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
 
       <!-- Contact -->
       <div class="w3-container" id="contact" style="margin-top:20px">
@@ -209,7 +219,7 @@
     </div>
 
     <!-- W3.CSS Container -->
-    <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:60px;padding-right:58px"><p class="w3-right">Logiciel créé par <a href="" title="" target="_blank" class="w3-hover-opacity">des étudiants en M2 MIAGE</a></p></div>
+    <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:50px;padding-right:58px"><p class="w3-right">Logiciel créé par <a href="" title="" target="_blank" class="w3-hover-opacity">des étudiants en M2 MIAGE</a></p></div>
 
     <script>
       // Script to open and close sidebar

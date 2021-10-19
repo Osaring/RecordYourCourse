@@ -10,6 +10,9 @@ const recordedVideo = document.querySelector('#recorded');
 const stopRecordButton = document.querySelector('button#stop-record');
 const downloadButton = document.querySelector('button#download');
 
+const recordInProgress = document.querySelector('div#record-in-progress');
+const downloadRecordFormat = document.querySelector('div#download-record-format');
+
 // start buttons
 const startRecordPPT = document.querySelector('img#button-start-PPT');
 const startRecordLO = document.querySelector('img#button-start-LO');
@@ -19,7 +22,10 @@ startRecordPPT.addEventListener('click', async () => {
   if (startRecordPPT.disabled) {
     alert("Un enregistrement est déjà en cours");
     return;
-  } else startButtonDisabled();
+  } else {
+    startButtonDisabled();
+    downloadRecordFormat.disabled = true;
+  }
 
   // alert("Sélectionner le diapo que vous voulez présenter")
   if (importPresentation() === "") { // No file imported
@@ -45,9 +51,7 @@ startRecordAR.addEventListener('click', async () => {
 });
 
 async function parameters() {
-  // Confirm Record Message
   if (window.confirm("Confirmer pour lancer la caméra et l'enregistrement")) {
-    alert("Démarrage de l'enregistrement");
   } else {
     alert("Arrêt de l'enregistrement");
     return;
@@ -63,6 +67,7 @@ async function parameters() {
   };
   console.log('Using media constraints:', constraints);
   await init(constraints);
+  recordInProgress.hidden = false;
   startRecording();
 };
 
@@ -71,7 +76,8 @@ stopRecordButton.addEventListener('click', () => {
     stopRecording();
     downloadButton.disabled = false;
     codecPreferences.disabled = false;
-    // button start activation
+    recordInProgress.hidden = true;
+    downloadRecordFormat.disabled = false;
     startButtonEnabled();
 });
 
@@ -79,7 +85,7 @@ function stopRecording() {
   mediaRecorder.stop();
   const gumVideo = document.querySelector('video#gum');
   gumVideo.srcObject = null;
-  stopRecordButton.hidden = true;
+  stopRecordButton.disabled = true;
   closeWebcamConnection();
 }
 function closeWebcamConnection(){
@@ -159,7 +165,7 @@ function startRecording() {
 }
 
 function handleSuccess(stream) {
-  stopRecordButton.hidden = false;
+  stopRecordButton.disabled = false;
   console.log('getUserMedia() got stream:', stream);
   window.stream = stream;
 

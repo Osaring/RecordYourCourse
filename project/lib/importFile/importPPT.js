@@ -12,7 +12,6 @@ function importPresentation() {
         console.log(file.name)
 
         // dézipper le ppt pour avoir le xml
-        
 
         if (file === "") return "";
         else return file.name;
