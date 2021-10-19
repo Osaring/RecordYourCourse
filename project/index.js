@@ -1,21 +1,23 @@
 const { app, BrowserWindow } = require('electron')
 
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
+
 function createWindow () {
   try{
     for (const dependency of ['chrome', 'node', 'electron']) {
       console.log(`${dependency}-version : `, process.versions[dependency]);
     }
     const win = new BrowserWindow({
-      width: 800,
-      height: 600,
+      width: 1000,
+      height: 800,
     })
     win.loadFile('./frontend/views/index.html')
-  } catch(e){
-    console.log(e)
+  } catch(error){
+    console.log(error)
   }
 }
 
-// Cette méthode sera appelée quand Electron aura fini de s'initialiser
+// Méthode appelée quand Electron a fini de s'initialiser
 app.whenReady().then(() => {
   createWindow()
   app.on('activate', function () {
