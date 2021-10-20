@@ -1,3 +1,5 @@
+import ZipFile from 'adm-zip';
+//const ZipFile = require('adm-zip');
 
 function importPresentation() {
 
@@ -10,8 +12,17 @@ function importPresentation() {
         const extension = file.name.split('.');
         console.log(extension[extension.length-1]);
         console.log(file.name)
-
-        // dézipper le ppt pour avoir le xml
+        
+        // Get a Zip FILE
+        const fileToZip = new ZipFile();
+        fileToZip.addLocalFile('./');
+        fileToZip.writeZip('./document1.zip');
+       
+        // Dézipper 
+        // GEt XML FILE
+        // Table des matières
+        // Slides => Images / Timing
+      
         
 
         if (file === "") return "";

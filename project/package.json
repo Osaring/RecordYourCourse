@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Osaring/RecordYourCourse#readme",
   "dependencies": {
+    "adm-zip": "^0.5.9",
     "electron": "^15.1.2",
     "nodemon": "^2.0.13"
   }
