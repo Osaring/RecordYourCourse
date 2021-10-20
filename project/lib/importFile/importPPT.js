@@ -12,18 +12,10 @@ function importPresentation() {
         const extension = file.name.split('.');
         console.log(extension[extension.length-1]);
         console.log(file.name)
-        
-        // Get a Zip FILE
-        const fileToZip = new ZipFile();
-        fileToZip.addLocalFile('./');
-        fileToZip.writeZip('./document1.zip');
-       
-        // Dézipper 
-        // GEt XML FILE
-        // Table des matières
-        // Slides => Images / Timing
-      
-        
+
+        // dézipper le ppt pour avoir le xml
+
+        getXMLFile(file);
 
         if (file === "") return "";
         else return file.name;
@@ -31,4 +23,9 @@ function importPresentation() {
     })
 }
 
-export { importPresentation };
+function getXMLFile(file) {
+
+    return null;
+}
+
+export { importPresentation, getXMLFile };
