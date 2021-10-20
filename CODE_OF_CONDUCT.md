@@ -1,6 +1,6 @@
 # Contributor Covenant Code of Conduct
 
-## Our Pledge
+## Notre engagement
 
 En tant que membres, contributeurs et dirigeants, nous nous engageons à faire de la participation à notre communauté une expérience sans harcèlement pour tous, quel que soit l'âge ou le sexe.
 La communauté est une expérience exempte de harcèlement pour tous, indépendamment de l'âge, de la
@@ -8,7 +8,7 @@ taille, du handicap visible ou invisible, de l'origine ethnique, des caractéris
 de l'éducation, du statut socio-économique, de la nationalité, de l'apparence personnelle,
 de la religion et de l'orientation sexuelles.
 
-## Our Standards
+## Nos standards
 
 Les bons exemples de comportements qui contribiuent à une humeur positive au sein de la communauté:
 
@@ -31,26 +31,26 @@ Exemples de comportements qui ne sont pas attendus:
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
-  Standards dédiées aux forums de discussion:
+Standards dédiées aux forums de discussion:
 
-  * 1️⃣ Ne pas contacter les membres par message personnel pour des demandes d'aide ou renseignements
-  * 2️⃣ Choisir le topic en fonction du sujet de la question
-  * 3️⃣ Ne pas mentionner de personnes lors des questions, d'autres utilisateurs peuvent répondre et
-    tout le monde n'est pas présent en permanence (les modérateurs peuvent mentionner un utilisateur à tout moment pour lui faire un rappel personnel)
-  * 4️⃣ Pas de publicités personnelles (sites, vidéos, chaînes, Discord...) sauf pour faire tester
-    vos projets. Les vidéos externes à la communauté seront partagées après avoir demandé l'accord
-  * 5️⃣ Personne ne vous doit rien, aucune obligation de répondre, merci de ne pas insister et ni
-    poster plusieurs fois
-  * 6️⃣ Un bonjour, s'il vous plait et merci sont un minimum
-  * 7️⃣ Les messages d'erreur sont faits pour être lus et compris, merci de chercher un peu avant
-    de  demander de l'aide, c'est comme ça qu'on apprend
-  * 8️⃣ Merci de respecter celles et ceux qui prennent le temps de vous aider bénévolement, on ne
-    peut pas tout savoir et tout le monde peut se tromper. De même, merci de lire leurs questions et d'y répondre.
-  * 9️⃣ Si la personne qui vous aide ne trouve pas la solution, merci de ne pas l'insulter ou la
-    critiquer. Par ailleurs, merci de ne pas donner la solution complète mais des pistes pour la
-    trouver.
-  * 🔟 En cas de question technique, je fournirai des détails du problème, une capture d'écran 
-    complète de l'erreur et du code complet (1 fichier, 1 partage) afin que les personnes qui pourraient aider puissent comprendre le problème. Pour partager du code j'utiliserai https://sharemycode.io/. Pas de captures d'écran de code sauf demande des modérateurs
+  1️⃣ Ne pas contacter les membres par message personnel pour des demandes d'aide ou renseignements
+  2️⃣ Choisir le topic en fonction du sujet de la question
+  3️⃣ Ne pas mentionner de personnes lors des questions, d'autres utilisateurs peuvent répondre et
+  tout le monde n'est pas présent en permanence (les modérateurs peuvent mentionner un utilisateur à tout moment pour lui faire un rappel personnel)
+  4️⃣ Pas de publicités personnelles (sites, vidéos, chaînes, Discord...) sauf pour faire tester
+  vos projets. Les vidéos externes à la communauté seront partagées après avoir demandé l'accord
+  5️⃣ Personne ne vous doit rien, aucune obligation de répondre, merci de ne pas insister et ni
+  poster plusieurs fois
+  6️⃣ Un bonjour, s'il vous plait et merci sont un minimum
+  7️⃣ Les messages d'erreur sont faits pour être lus et compris, merci de chercher un peu avant
+  de  demander de l'aide, c'est comme ça qu'on apprend
+  8️⃣ Merci de respecter celles et ceux qui prennent le temps de vous aider bénévolement, on ne
+  peut pas tout savoir et tout le monde peut se tromper. De même, merci de lire leurs questions et d'y répondre.
+  9️⃣ Si la personne qui vous aide ne trouve pas la solution, merci de ne pas l'insulter ou la
+  critiquer. Par ailleurs, merci de ne pas donner la solution complète mais des pistes pour la
+  trouver.
+  🔟 En cas de question technique, je fournirai des détails du problème, une capture d'écran 
+  complète de l'erreur et du code complet (1 fichier, 1 partage) afin que les personnes qui pourraient aider puissent comprendre le problème. Pour partager du code j'utiliserai https://sharemycode.io/. Pas de captures d'écran de code sauf demande des modérateurs
 
 Si vous voyez un message qui enfreint ces règles, ajoutez y une réaction :cartonjaune: pour prévenir les responsables. Merci
 
