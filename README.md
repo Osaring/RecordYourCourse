@@ -13,8 +13,8 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <div>Table des matières</div>
+<div>
+  <summary>Table des matières</summary>
   <ol>
     <li>
       <a href="#about-the-project">A propos du projet</a>
@@ -36,13 +36,12 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Remerciements</a></li>
   </ol>
-</details>
+</div>
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-***
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -63,7 +62,6 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 <!-- GETTING STARTED -->
 ## Lancer le projet
-***
 
 Il s'agit d'un exemple de la façon dont vous pouvez donner installer ce projet localement.
 Pour mettre en place une copie locale et la faire fonctionner, suivez les étapes ci-dessous.
@@ -95,7 +93,6 @@ Pour mettre en place une copie locale et la faire fonctionner, suivez les étape
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-***
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -115,12 +112,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
-***
 
 Pour contribuer au projet, les informations techniques sont détaillées dans le fichier
 ```sh
@@ -142,30 +135,22 @@ N'oubliez pas de donner une étoile au projet ! Merci encore !
 Votre code sera examiné le plus rapidement par les développeurs, une validation par au-moins deux
 deux développeurs est requise pour être merge sur la branche principale.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## License
-***
 
 Ce projet est diffusé sous la licence GNU 3. 
 Liser le fichier `LICENSE.txt` pour plus d'informations.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
-***
 
 Your Name - [@RecordYourCourse](https://twitter.com/) - official@recordyourcourse.com
 Project Link: [https://github.com/Osaring/RecordYourCourse](https://github.com/Osaring/RecordYourCourse)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-***
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
@@ -179,4 +164,3 @@ Use this space to list resources you find helpful and would like to give credit 
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-***
