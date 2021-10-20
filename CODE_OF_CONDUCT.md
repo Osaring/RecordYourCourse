@@ -2,30 +2,25 @@
 
 ## Our Pledge
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity
-and orientation.
-
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+En tant que membres, contributeurs et dirigeants, nous nous engageons à faire de la participation à notre communauté une expérience sans harcèlement pour tous, quel que soit l'âge ou le sexe.
+La communauté est une expérience exempte de harcèlement pour tous, indépendamment de l'âge, de la
+taille, du handicap visible ou invisible, de l'origine ethnique, des caractéristiques sexuelles,
+de l'éducation, du statut socio-économique, de la nationalité, de l'apparence personnelle,
+de la religion et de l'orientation sexuelles.
 
 ## Our Standards
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+Les bons exemples de comportements qui contribiuent à une humeur positive au sein de la communauté:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
-  overall community
+* Faire preuve d'empathie et de bienveillance envers chacun
+* Être respectueux des opinions, points de vue et expériences divergents
+* Donner et accepter gracieusement des commentaires constructifs
+* Accepter la responsabilité et s'excuser auprès des personnes affectées par nos erreurs,
+  et apprendre de l'expérience
+* Se concentrer sur ce qui est le mieux non seulement pour nous en tant qu'individus, mais
+  aussi pour l'intérêt commun
 
-Examples of unacceptable behavior include:
+Exemples de comportements qui ne sont pas attendus:
 
 * The use of sexualized language or imagery, and sexual attention or
   advances of any kind
@@ -35,6 +30,29 @@ Examples of unacceptable behavior include:
   address, without their explicit permission
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
+
+  Standards dédiées aux forums de discussion:
+
+  * 1️⃣ Ne pas contacter les membres par message personnel pour des demandes d'aide ou renseignements
+  * 2️⃣ Choisir le topic en fonction du sujet de la question
+  * 3️⃣ Ne pas mentionner de personnes lors des questions, d'autres utilisateurs peuvent répondre et
+    tout le monde n'est pas présent en permanence (les modérateurs peuvent mentionner un utilisateur à tout moment pour lui faire un rappel personnel)
+  * 4️⃣ Pas de publicités personnelles (sites, vidéos, chaînes, Discord...) sauf pour faire tester
+    vos projets. Les vidéos externes à la communauté seront partagées après avoir demandé l'accord
+  * 5️⃣ Personne ne vous doit rien, aucune obligation de répondre, merci de ne pas insister et ni
+    poster plusieurs fois
+  * 6️⃣ Un bonjour, s'il vous plait et merci sont un minimum
+  * 7️⃣ Les messages d'erreur sont faits pour être lus et compris, merci de chercher un peu avant
+    de  demander de l'aide, c'est comme ça qu'on apprend
+  * 8️⃣ Merci de respecter celles et ceux qui prennent le temps de vous aider bénévolement, on ne
+    peut pas tout savoir et tout le monde peut se tromper. De même, merci de lire leurs questions et d'y répondre.
+  * 9️⃣ Si la personne qui vous aide ne trouve pas la solution, merci de ne pas l'insulter ou la
+    critiquer. Par ailleurs, merci de ne pas donner la solution complète mais des pistes pour la
+    trouver.
+  * 🔟 En cas de question technique, je fournirai des détails du problème, une capture d'écran 
+    complète de l'erreur et du code complet (1 fichier, 1 partage) afin que les personnes qui pourraient aider puissent comprendre le problème. Pour partager du code j'utiliserai https://sharemycode.io/. Pas de captures d'écran de code sauf demande des modérateurs
+
+Si vous voyez un message qui enfreint ces règles, ajoutez y une réaction :cartonjaune: pour prévenir les responsables. Merci
 
 ## Enforcement Responsibilities
 
@@ -50,21 +68,20 @@ decisions when appropriate.
 
 ## Scope
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+Ce code de conduite s'applique dans tous les espaces de communauté, mais il est aussi valable
+quand vous représentez indivudellement la communauté dans un espace public. Des exemples de
+représentation sont par exemple l'utilisation d'une adresse mail officielle, poster sur les réseaux
+sociaux avec un compte officiel, ou bien montrer que le produit est de qualité lors des événements
+online ou réel.
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-vechaubard.valentin@gmail.com, lefa.nicolas@gmail.com, lynamadjda@gmail.com, c.benmedakhene@gmail.com.
-All complaints will be reviewed and investigated promptly and fairly.
+Des cas de comportement abusif, harcelant ou autrement inacceptable peuvent être
+signalés aux dirigeants communautaires : vechaubard.valentin@gmail.com, lefa.nicolas@gmail.com, lynamadjda@gmail.com, c.benmedakhene@gmail.com.
+Toutes les plaintes seront examinées rapidement et équitablement.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+Tous les dirigeants communautaires sont tenus de respecter la confidentialité et la sécurité des
+signaleurs de tout incident.
 
 ## Enforcement Guidelines
 
