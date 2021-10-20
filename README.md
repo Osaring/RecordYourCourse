@@ -14,27 +14,27 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <div>Table des matières</div>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">A propos du projet</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Technos utilisées</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Lancer le projet</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#prerequisites">Prérequis</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Utilisation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#license">Licence</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Remerciements</a></li>
   </ol>
 </details>
 
@@ -42,6 +42,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+***
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -54,20 +55,15 @@ Here's why:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Built With
+### Technos utilisées
 
 * [Node.js](https://nodejs.org/)
 * [Electron (npm)](https://www.npmjs.com/package/electron)
 * [Bootstrap](https://getbootstrap.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
 ## Lancer le projet
+***
 
 Il s'agit d'un exemple de la façon dont vous pouvez donner installer ce projet localement.
 Pour mettre en place une copie locale et la faire fonctionner, suivez les étapes ci-dessous.
@@ -80,11 +76,11 @@ Pour mettre en place une copie locale et la faire fonctionner, suivez les étape
   ```
 ### Installation
 
-1. Clone the repo
+1. Clone le projet
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-2. Install NPM packages
+2. Installer les modules NPM
    ```sh
    npm install
    ```
@@ -97,21 +93,17 @@ Pour mettre en place une copie locale et la faire fonctionner, suivez les étape
    npm i "nom module"
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
+***
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- ROADMAP -->
 ## Roadmap
+***
 
 - [x] Add Changelog
 - [x] Add back to top links
@@ -128,6 +120,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 <!-- CONTRIBUTING -->
 ## Contributing
+***
 
 Pour contribuer au projet, les informations techniques sont détaillées dans le fichier
 ```sh
@@ -154,6 +147,7 @@ deux développeurs est requise pour être merge sur la branche principale.
 
 <!-- LICENSE -->
 ## License
+***
 
 Ce projet est diffusé sous la licence GNU 3. 
 Liser le fichier `LICENSE.txt` pour plus d'informations.
@@ -162,6 +156,7 @@ Liser le fichier `LICENSE.txt` pour plus d'informations.
 
 <!-- CONTACT -->
 ## Contact
+***
 
 Your Name - [@RecordYourCourse](https://twitter.com/) - official@recordyourcourse.com
 Project Link: [https://github.com/Osaring/RecordYourCourse](https://github.com/Osaring/RecordYourCourse)
@@ -170,6 +165,7 @@ Project Link: [https://github.com/Osaring/RecordYourCourse](https://github.com/O
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+***
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
@@ -183,21 +179,4 @@ Use this space to list resources you find helpful and would like to give credit 
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+***
