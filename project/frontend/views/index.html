@@ -60,6 +60,7 @@
         <input type="file" id="file" hidden>
         <div>
           > Cliquer sur votre support de présentation pour lancer : Camera / Audio / Screen
+          <button class="generate" id="generate">Générer SMIL</button>
         </div>
         <div class="container-icon">
           <div class="icon-ppt">
@@ -85,6 +86,7 @@
         <video id="gum" playsinline autoplay muted></video>
         <video id="recorded" playsinline></video>
         <!-- echo cancellation -->
+        
         <div>
           <div>
             <h5>Media Stream Constraints options</h5>
@@ -235,7 +237,8 @@
     <!-- include adapter for srcObject shim -->
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script type="module" src="../../lib/record/record.js"></script>
-    <script type="module" src="./../../lib/importFile/importPPT.js"></script>
+    <script type="module" src="../../lib/importFile/importPPT.js"></script>
+    <script type="module" src="../../lib/generate/generateSMIL.js"></script>
 
   </body>
 </html>

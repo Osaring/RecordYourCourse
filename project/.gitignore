@@ -3,6 +3,7 @@ build/
 node_modules/
 .idea/
 .vscode/
+../.vscode/
 
 .DS_Store
 yarn.lock
