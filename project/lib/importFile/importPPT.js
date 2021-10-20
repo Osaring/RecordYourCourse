@@ -1,5 +1,4 @@
-import ZipFile from 'adm-zip';
-//const ZipFile = require('adm-zip');
+import * as JSZip from '../../node_modules/jszip/dist/jszip.js';
 
 function importPresentation() {
 
@@ -12,11 +11,9 @@ function importPresentation() {
         const extension = file.name.split('.');
         console.log(extension[extension.length-1]);
         console.log(file.name)
-
-        // dézipper le ppt pour avoir le xml
-
+        
         getXMLFile(file);
-
+    
         if (file === "") return "";
         else return file.name;
 
@@ -24,8 +21,12 @@ function importPresentation() {
 }
 
 function getXMLFile(file) {
-
-    return null;
+    //
+    var zip = new JSZip();
+    zip.add(file, {base64: true});
+    content = zip.generate();
+    location.href = "data:application/zip;base64," + content;
+    //
 }
 
 export { importPresentation, getXMLFile };
