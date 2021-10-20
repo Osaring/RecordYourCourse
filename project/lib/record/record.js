@@ -1,6 +1,4 @@
-// Pourra être utile pour zoom sur la vidéo dans une une nouvelle fenetre (à voir plus tard)
-// window.open("exit.html", "Thanks for Visiting!");
-'use strict';
+import { importPresentation } from '../importFile/importPPT.js';
 
 /* globals MediaRecorder */
 var mediaRecorder;
@@ -8,50 +6,56 @@ var recordedBlobs;
 
 const codecPreferences = document.querySelector('#codecPreferences');
 const errorMsgElement = document.querySelector('span#errorMsg');
-const recordedVideo = document.querySelector('video#recorded');
+const recordedVideo = document.querySelector('#recorded');
 const stopRecordButton = document.querySelector('button#stop-record');
 const downloadButton = document.querySelector('button#download');
-// buttons Start
+
+const recordInProgress = document.querySelector('div#record-in-progress');
+const downloadRecordFormat = document.querySelector('div#download-record-format');
+
+// start buttons
 const startRecordPPT = document.querySelector('img#button-start-PPT');
 const startRecordLO = document.querySelector('img#button-start-LO');
 const startRecordAR = document.querySelector('img#button-start-AR');
 
-
-
 startRecordPPT.addEventListener('click', async () => {
-  if (startRecordPPT.disabled) { alert("Un enregistrement est déjà en cours."); return; };
-  startRecordPPT.disabled = true;
-  startRecordLO.disabled = true;
-  startRecordAR.disabled = true;
-  importPPTandConvertSlides(); //todo
-  await parameters();
+  if (startRecordPPT.disabled) {
+    alert("Un enregistrement est déjà en cours");
+    return;
+  } else {
+    startButtonDisabled();
+    downloadRecordFormat.disabled = true;
+  }
+
+  // alert("Sélectionner le diapo que vous voulez présenter")
+  if (importPresentation() === "") { // No file imported
+    startButtonEnabled();
+    alert("Aucun fichier sélectionné, veullez recommencer")
+  } else await parameters(); // Continue program (confirmation message)
 });
+
 startRecordLO.addEventListener('click', async () => {
-  if (startRecordLO.disabled) { alert("Un enregistrement est déjà en cours."); return; };
-  startRecordLO.disabled = true;
-  startRecordPPT.disabled = true;
-  startRecordAR.disabled = true;
+  if (startRecordLO.disabled) {
+    alert("Un enregistrement est déjà en cours");
+    return;
+  } else startButtonDisabled();
   await parameters();
 });
 startRecordAR.addEventListener('click', async () => {
-  if (startRecordAR.disabled) { alert("Un enregistrement est déjà en cours."); return; };
-  startRecordAR.disabled = true;
-  startRecordPPT.disabled = true;
-  startRecordLO.disabled = true;
+  if (startRecordAR.disabled) {
+    alert("Un enregistrement est déjà en cours");
+    return;
+  }
+  else startButtonDisabled();
   await parameters();
 });
 
-
-
 async function parameters() {
-  // Confirm Record Message
   if (window.confirm("Confirmer pour lancer la caméra et l'enregistrement")) {
-    alert("Lancement du programme");
-  }else{
-    alert("Arrêt du programme");
+  } else {
+    alert("Arrêt de l'enregistrement");
     return;
   }
-
   const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
   const constraints = {
     audio: {
@@ -61,9 +65,9 @@ async function parameters() {
       width: 1280, height: 720
     }
   };
-
   console.log('Using media constraints:', constraints);
   await init(constraints);
+  recordInProgress.hidden = false;
   startRecording();
 };
 
@@ -72,17 +76,16 @@ stopRecordButton.addEventListener('click', () => {
     stopRecording();
     downloadButton.disabled = false;
     codecPreferences.disabled = false;
-    // button start activation
-    startRecordPPT.disabled = false;
-    startRecordLO.disabled = false;
-    startRecordAR.disabled = false;
+    recordInProgress.hidden = true;
+    downloadRecordFormat.disabled = false;
+    startButtonEnabled();
 });
 
 function stopRecording() {
   mediaRecorder.stop();
   const gumVideo = document.querySelector('video#gum');
   gumVideo.srcObject = null;
-  stopRecordButton.hidden = true;
+  stopRecordButton.disabled = true;
   closeWebcamConnection();
 }
 function closeWebcamConnection(){
@@ -162,7 +165,7 @@ function startRecording() {
 }
 
 function handleSuccess(stream) {
-  stopRecordButton.hidden = false;
+  stopRecordButton.disabled = false;
   console.log('getUserMedia() got stream:', stream);
   window.stream = stream;
 
@@ -178,8 +181,14 @@ function handleSuccess(stream) {
   codecPreferences.disabled = false;
 }
 
-
-// func import
-function importPPTandConvertSlides() {
-  return;
+// deactivate/activate start button
+function startButtonDisabled(){
+  startRecordPPT.disabled = true;
+  startRecordLO.disabled = true;
+  startRecordAR.disabled = true;
+}
+function startButtonEnabled(){
+  startRecordPPT.disabled = false;
+  startRecordLO.disabled = false;
+  startRecordAR.disabled = false;
 }
