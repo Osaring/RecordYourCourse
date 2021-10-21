@@ -52,6 +52,8 @@ async function parameters() {
   };
   console.log('Using media constraints:', constraints);
   await init(constraints);
+  downloadButton.disabled = true;
+  codecPreferences.disabled = true;
   recordInProgress.hidden = false;
   startRecording();
 };

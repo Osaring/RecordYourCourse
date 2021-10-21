@@ -1,6 +1,6 @@
 const JSZip = require('jszip')
+var AdmZip = require("adm-zip");
 const FileSaver = require('file-saver');
-const zip = new JSZip();
 
 async function importPresentation() {
     document.getElementById('file').click();
@@ -14,10 +14,11 @@ async function importPresentation() {
                 console.log("metadata file ", file)
                 console.log("extension file ", splitFilename[splitFilename.length - 1]);
 
-                zipFile().catch((err) => {
+                zipFile(file)
+                /*.catch((err) => {
                     console.log(err);
                 });
-
+                */
                 // unzipFile(splitFilename[Ø]+".zip");
                 console.log("fin importFile")
                 resolve("ok")
@@ -30,13 +31,20 @@ async function importPresentation() {
 function zipFile(file) {
     const p = new Promise (function (resolve, reject) {
         console.log("début zipFile");
-
         const name = file.name.split('.')[0] + ".zip";
+
         zip.file(name, file);
-        zip.generateAsync({type:"blob"})
+        zip.generateAsync({type:"blob", mimeType: "application/zip"}, )
         .then(function(content) {
-            saveAs(content, name);
+            FileSaver.saveAs(content, name);
         });
+
+        /*
+        var content = "inner content of the file";
+        var zip = new AdmZip();
+        zip.addFile(name);
+        zip.writeZip(__dirname+"/"+name);
+         */
         console.log("fin zipFile")
         resolve("ok")
     })
