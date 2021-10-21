@@ -1,5 +1,4 @@
 const JSZip = require('jszip')
-var AdmZip = require("adm-zip");
 const FileSaver = require('file-saver');
 
 async function importPresentation() {
@@ -31,20 +30,15 @@ async function importPresentation() {
 function zipFile(file) {
     const p = new Promise (function (resolve, reject) {
         console.log("début zipFile");
-        const name = file.name.split('.')[0] + ".zip";
 
+        const zip = new JSZip();
+        const name = file.name.split('.')[0] + ".zip";
         zip.file(name, file);
-        zip.generateAsync({type:"blob", mimeType: "application/zip"}, )
+        zip.generateAsync({type:"blob", compression: 'DEFLATE'})
         .then(function(content) {
             FileSaver.saveAs(content, name);
         });
 
-        /*
-        var content = "inner content of the file";
-        var zip = new AdmZip();
-        zip.addFile(name);
-        zip.writeZip(__dirname+"/"+name);
-         */
         console.log("fin zipFile")
         resolve("ok")
     })
