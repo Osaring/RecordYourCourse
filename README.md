@@ -134,4 +134,4 @@ Utilisez cet espace pour lister les ressources que vous trouvez utiles. Voici qu
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">Top</a></p>
