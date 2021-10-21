@@ -6,7 +6,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Record Your Courses</h3>
+  <h2 align="center">Record Your Courses</h2>
+  <br>
+  <p>
+    <img style="width:200px; height;70px;" src="./project/frontend/images/recordYourCourse.png">
+  </p>
   <p align="center">
   </p>
 </div>
@@ -38,10 +42,8 @@
   </ol>
 </div>
 
-
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## A propros du projet
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -92,7 +94,7 @@ Pour mettre en place une copie locale et la faire fonctionner, suivez les étape
    ```
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Utilisation
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -100,7 +102,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-***
 
 - [x] Add Changelog
 - [x] Add back to top links
@@ -115,10 +116,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Pour contribuer au projet, les informations techniques sont détaillées dans le fichier
-```sh
-CONTRIBUTING.md
-```
+Pour contribuer au projet, les informations techniques sont détaillées dans le fichier `CONTRIBUTING.md`.
 
 Les contributions sont ce qui fait de la communauté open source un endroit extraordinaire pour apprendre, inspirer et créer. Toutes vos contributions sont **grandement appréciées**.
 
@@ -137,7 +135,7 @@ deux développeurs est requise pour être merge sur la branche principale.
 
 
 <!-- LICENSE -->
-## License
+## Licence
 
 Ce projet est diffusé sous la licence GNU 3. 
 Liser le fichier `LICENSE.txt` pour plus d'informations.
@@ -150,7 +148,7 @@ Your Name - [@RecordYourCourse](https://twitter.com/) - official@recordyourcours
 Project Link: [https://github.com/Osaring/RecordYourCourse](https://github.com/Osaring/RecordYourCourse)
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Remerciements
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
