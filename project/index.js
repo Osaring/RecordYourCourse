@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 
@@ -14,16 +14,16 @@ function createWindow () {
         nodeIntegration: true,
         contextIsolation: false,
       }
-    })
-    win.loadFile('./frontend/views/index.html')
+    });
+    win.loadFile('./frontend/views/index.html');
   } catch(error){
-    console.log(error)
+    console.log(error);
   }
 }
 
 // Méthode appelée quand Electron a fini de s'initialiser
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
   app.on('activate', function () {
     // Sur macOS il est d'usage de recréer une fenêtre dans l'application quand
     // l'icône du dock est cliquée et qu'il n'y a pas d'autre fenêtre ouverte.
