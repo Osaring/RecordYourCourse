@@ -20,6 +20,17 @@ span {
     margin-right: 13%;
 }
 
+.icon-start {
+    display: inline-block;
+    justify-content: space-between;
+}
+.icon-start:hover {
+    opacity:0.7;
+}
+.icon-start:disabled{
+    opacity:0.4;
+}
+
 .btn-stop {
     background: #f44434;
     border: none;
@@ -32,7 +43,6 @@ span {
     display: inline-block;
     font-size: 16px;
     border-radius: 14px;
-
     justify-content: space-between;margin-right:auto;margin-left:auto;
 }
 .btn-stop:hover{

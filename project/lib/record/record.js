@@ -15,40 +15,30 @@ const recordInProgress = document.querySelector('div#record-in-progress');
 const downloadRecordFormat = document.querySelector('div#download-record-format');
 
 // start buttons
-const startRecordPPT = document.querySelector('img#button-start-PPT');
-const startRecordLO = document.querySelector('img#button-start-LO');
-const startRecordAR = document.querySelector('img#button-start-AR');
+const startRecord = document.querySelector('#button-start-record');
 
-startRecordPPT.addEventListener('click', async () => {
-  if (startRecordPPT.disabled) {
+startRecord.addEventListener('click', async () => {
+  if (startRecord.disabled) {
     alert("Un enregistrement est déjà en cours");
     return;
   } else {
     startButtonDisabled();
     downloadRecordFormat.disabled = true;
   }
-
-  // alert("Sélectionner le diapo que vous voulez présenter")
-  if (importPresentation() === "") { // No file imported
+  // alert("Sélectionner le fichier que vous voulez présenter")
+  importPresentation();
+  console.log("ap import")
+  const filename="1"
+  if (filename === "") { // No file imported
+    console.log("if")
     startButtonEnabled();
     alert("Aucun fichier sélectionné, veullez recommencer")
-  } else await parameters(); // Continue program (confirmation message)
-});
-
-startRecordLO.addEventListener('click', async () => {
-  if (startRecordLO.disabled) {
-    alert("Un enregistrement est déjà en cours");
-    return;
-  } else startButtonDisabled();
-  await parameters();
-});
-startRecordAR.addEventListener('click', async () => {
-  if (startRecordAR.disabled) {
-    alert("Un enregistrement est déjà en cours");
-    return;
+  } else {
+      console.log("import ok et parameters debut")
+      await parameters(); // Continue program (confirmation message)
+      console.log("para fini")
   }
-  else startButtonDisabled();
-  await parameters();
+  console.log("fini")
 });
 
 async function parameters() {
@@ -184,12 +174,8 @@ function handleSuccess(stream) {
 
 // deactivate/activate start button
 function startButtonDisabled(){
-  startRecordPPT.disabled = true;
-  startRecordLO.disabled = true;
-  startRecordAR.disabled = true;
+  startRecord.disabled = true;
 }
 function startButtonEnabled(){
-  startRecordPPT.disabled = false;
-  startRecordLO.disabled = false;
-  startRecordAR.disabled = false;
+  startRecord.disabled = false;
 }

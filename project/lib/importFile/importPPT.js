@@ -1,32 +1,50 @@
-import * as JSZip from '../../node_modules/jszip/dist/jszip.js';
+const JSZip = require('jszip')
+const FileSaver = require('file-saver');
 
-function importPresentation() {
+async function importPresentation() {
+    return new Promise((resolve,reject)=>{
 
-    document.getElementById('file').click();
-    document.getElementById("file").addEventListener('change', (e) => {
-
-        const file = e.target.files[0];
-
-        console.log(file)
-        const extension = file.name.split('.');
-        console.log(extension[extension.length-1]);
-        console.log(file.name)
-        
-        getXMLFile(file);
-    
-        if (file === "") return "";
-        else return file.name;
-
+        document.getElementById('file').click();
+        document.getElementById("file").addEventListener('change', (e) => {
+            while (e.target.files && e.target.files.length === 0){
+                const file = e.target.files[0];
+                const extension = file.name.split('.');
+                console.log("metadata file ", file)
+                console.log("filename ", file.name)
+                console.log("extension file ", extension[extension.length-1]);
+                zipFile(file); // zip le fichier importé
+                console.log("fileeee return")
+            }
+        })
     })
 }
 
-function getXMLFile(file) {
-    //
-    var zip = new JSZip();
-    zip.add(file, {base64: true});
-    content = zip.generate();
-    location.href = "data:application/zip;base64," + content;
-    //
+function zipFile(file) {
+    return new Promise((resolve,reject)=>{
+
+        const zip = new JSZip();
+        const name = file.name.split('.')[0] + ".zip";
+        zip.file(name, file);
+        zip.generateAsync({type:"blob"})
+        .then(function(content) {
+            saveAs(content, name);
+            /*
+            var item = {
+            'name': name,
+            'type': content.type,
+            'size': content.size,
+            'guid': generatorguid()
+            };
+            */
+        });
+        console.log("zipfile func")
+    })
 }
 
-export { importPresentation, getXMLFile };
+function getXMLFile(zipFile) {
+    console.log("zipFile ", zipFile)
+    return ;
+}
+
+
+export { importPresentation, zipFile, getXMLFile };

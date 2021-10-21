@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Osaring/RecordYourCourse#readme",
   "dependencies": {
     "electron": "^15.1.2",
+    "file-saver": "^2.0.5",
     "jszip": "^3.7.1",
     "nodemon": "^2.0.13"
   }
