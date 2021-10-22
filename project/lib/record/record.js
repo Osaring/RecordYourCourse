@@ -14,31 +14,26 @@ const downloadButton = document.querySelector('button#download');
 const recordInProgress = document.querySelector('div#record-in-progress');
 const downloadRecordFormat = document.querySelector('div#download-record-format');
 
-// start buttons
 const startRecord = document.querySelector('#button-start-record');
 
 startRecord.addEventListener('click', async () => {
-  if (startRecord.disabled) {
-    alert("Un enregistrement est déjà en cours");
-    return;
-  } else {
-    startButtonDisabled();
-    downloadRecordFormat.disabled = true;
-  }
-  // alert("Sélectionner le fichier que vous voulez présenter")
-  importPresentation();
-  console.log("ap import")
-  const filename="1"
-  if (filename === "") { // No file imported
-    console.log("if")
-    startButtonEnabled();
-    alert("Aucun fichier sélectionné, veullez recommencer")
-  } else {
-      console.log("import ok et parameters debut")
-      await parameters(); // Continue program (confirmation message)
-      console.log("para fini")
-  }
-  console.log("fini")
+    if (startRecord.disabled) {
+        alert("Un enregistrement est déjà en cours");
+        return;
+    } else {
+        startButtonDisabled();
+        downloadRecordFormat.disabled = true;
+    }
+    await importPresentation().then( response => {
+        if (response === "") { // No file imported
+            startButtonEnabled();
+            alert("Aucun fichier sélectionné, veullez recommencer")
+        } else {
+            console.log("import ok et parameters debut")
+            parameters(); // Continue program (confirmation message)
+            console.log("parameters start")
+        }
+    })
 });
 
 async function parameters() {
@@ -58,6 +53,8 @@ async function parameters() {
   };
   console.log('Using media constraints:', constraints);
   await init(constraints);
+  downloadButton.disabled = true;
+  codecPreferences.disabled = true;
   recordInProgress.hidden = false;
   startRecording();
 };

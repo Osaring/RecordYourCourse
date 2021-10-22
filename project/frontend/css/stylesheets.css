@@ -6,29 +6,32 @@
     justify-content: space-between;
 
 }
+
+/*
 .icon-ppt {
     display: inline-block;
     justify-content: space-between;
 }
-icon-ppt:hover {
+.icon-ppt:hover {
     opacity:0.7;
 }
-
-span {
-    float:right;
-    font-weight: bold;
-    margin-right: 13%;
-}
+*/
 
 .icon-start {
     display: inline-block;
     justify-content: space-between;
 }
 .icon-start:hover {
-    opacity:0.7;
+    opacity: 0.7;
 }
 .icon-start:disabled{
-    opacity:0.4;
+    opacity: 0.4;
+}
+
+span {
+    float:left;
+    font-weight: bold;
+    margin-left: 3%;
 }
 
 .btn-stop {
@@ -43,7 +46,9 @@ span {
     display: inline-block;
     font-size: 16px;
     border-radius: 14px;
-    justify-content: space-between;margin-right:auto;margin-left:auto;
+    justify-content: space-between;
+    margin-right:auto;
+    margin-left:auto;
 }
 .btn-stop:hover{
     opacity:0.7;
@@ -62,11 +67,6 @@ h2 {
 h2 i {
     font-size:36px;
 }
-
-img:hover {
-    opacity: 0.8;
-}
-
 
 
 /* css valentin à revoir */
