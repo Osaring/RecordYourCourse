@@ -21,14 +21,10 @@ function importPresentation() {
 
 function zipFile(file, name) {
     console.log("zipFile");
-    const splitPath = file.path.split('/');
-    console.log(splitPath);
+    const splitPath = file.path.split('.');
+    console.log('Splitpath ='+splitPath);
 
-    var newPath = "/";
-    for(var i = 1; i <= splitPath.length - 2; i++){
-        newPath += splitPath[i] + "/";
-    }
-    newPath += name + ".zip";
+    var newPath = splitPath[0]+'.zip';
 
     console.log(newPath);
     fs.rename(file.path, newPath , function(err) {
