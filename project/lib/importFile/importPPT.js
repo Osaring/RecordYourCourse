@@ -21,29 +21,15 @@ function importPresentation() {
 
 function zipFile(file, name) {
     console.log("zipFile");
-    const splitPath = file.path.split('/');
+    const splitPath = file.path.split('.');
     console.log(splitPath);
 
-    var newPath = "/";
-    for(var i = 1; i <= splitPath.length - 2; i++){
-        newPath += splitPath[i] + "/";
-    }
-    newPath += name + ".zip";
-
+    var newPath = splitPath[0] + ".zip";
     console.log(newPath);
-    fs.rename(file.path, newPath , function(err) {
+
+    fs.rename(file.path, newPath, function(err) {
         if ( err ) console.log('ERROR: ' + err);
     });
-
-
-    /*
-    zip.file(name+".zip", file, {blob: true});
-    zip.generateAsync({type:"blob"}).then(function (content) {
-        location.href="data:application/zip;base64," + content;
-    });
-    return ;
-
-    */
 }
 
 export { importPresentation, zipFile };

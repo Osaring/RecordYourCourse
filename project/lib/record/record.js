@@ -1,6 +1,5 @@
 import { importPresentation } from '../importFile/importPPT.js';
 
-
 /* globals MediaRecorder */
 var mediaRecorder;
 var recordedBlobs;
