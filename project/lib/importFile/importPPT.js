@@ -1,3 +1,6 @@
+import path from 'path';
+const CONST_COURS_PATH;
+
 var fs = require('fs');
 
 function importPresentation() {
@@ -6,14 +9,16 @@ function importPresentation() {
         document.getElementById('file').addEventListener('change', (e) => {
             if (e.target.files) {
                 const file = e.target.files[0];
-                console.log("metadata file ", file)
+                console.log("metadata file ", file);
 
                 const splitFilename = file.name.split('.');
                 const extension = splitFilename[splitFilename.length - 1];
 
                 copyFileImported(file, extension);
                 zipFile(file, extension);
-                console.log("fin importFile")
+                console.log("[importPresentation] success");
+                CONST_COURS_PATH = choosePath();
+                console.log(CONST_COURS_PATH)
             }
         })
         resolve("ok");
@@ -29,11 +34,11 @@ function copyFileImported(file, extension){
             throw err;
         }
     });
-    console.log("fin copyFileImported")
+    console.log("[copyFileImported] success");
 }
 
 function zipFile(file, extension) {
-    console.log("zipFile");
+    console.log("[ZipFile] start");
     const splitPath = file.path.split('.');
 
     var oldPath = splitPath[0] + '_copie.' + extension;
@@ -44,8 +49,12 @@ function zipFile(file, extension) {
     fs.rename(oldPath, newPath , function(err) {
         if ( err ) console.log('ERROR: ' + err);
     });
-
-
+    console.log("[ZipFile] success")
 }
 
-export { importPresentation, zipFile };
+function choosePath() {
+    path = "test path"
+    return path;
+}
+
+export { importPresentation };
