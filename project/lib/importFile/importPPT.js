@@ -1,11 +1,9 @@
-const JSZip = require('jszip')
-const FileSaver = require('file-saver');
+var fs = require('fs');
 
-async function importPresentation() {
-    document.getElementById('file').click();
-    const p = new Promise (function (resolve, reject) {
+function importPresentation() {
+    return new Promise((resolve, reject) => {
+        document.getElementById('file').click();
         document.getElementById('file').addEventListener('change', (e) => {
-
             if (e.target.files) {
                 const file = e.target.files[0];
                 console.log("length ", e.target.files.length)
@@ -13,46 +11,39 @@ async function importPresentation() {
                 console.log("metadata file ", file)
                 console.log("extension file ", splitFilename[splitFilename.length - 1]);
 
-                zipFile(file)
-                /*.catch((err) => {
-                    console.log(err);
-                });
-                */
-                // unzipFile(splitFilename[Ø]+".zip");
+                zipFile(file, splitFilename[0]);
                 console.log("fin importFile")
-                resolve("ok")
             }
         })
-    })
-    return p;
-}
-
-function zipFile(file) {
-    const p = new Promise (function (resolve, reject) {
-        console.log("début zipFile");
-
-        const zip = new JSZip();
-        const name = file.name.split('.')[0] + ".zip";
-        zip.file(name, file);
-        zip.generateAsync({type:"blob", compression: 'DEFLATE'})
-        .then(function(content) {
-            FileSaver.saveAs(content, name);
-        });
-
-        console.log("fin zipFile")
-        resolve("ok")
-    })
-    return p;
-}
-
-function unzipFile(file) {
-    zip.loadAsync(file).then(function (zip) {
-        Object.keys(zip.files).forEach(function (filename) {
-            zip.files[filename].async('string').then(function (fileData) {
-                console.log(fileData) // These are your file contents
-            })
-        })
+        resolve("ok");
     })
 }
 
-export { importPresentation, zipFile, unzipFile };
+function zipFile(file, name) {
+    console.log("zipFile");
+    const splitPath = file.path.split('/');
+    console.log(splitPath);
+
+    var newPath = "/";
+    for(var i = 1; i <= splitPath.length - 2; i++){
+        newPath += splitPath[i] + "/";
+    }
+    newPath += name + ".zip";
+
+    console.log(newPath);
+    fs.rename(file.path, newPath , function(err) {
+        if ( err ) console.log('ERROR: ' + err);
+    });
+
+
+    /*
+    zip.file(name+".zip", file, {blob: true});
+    zip.generateAsync({type:"blob"}).then(function (content) {
+        location.href="data:application/zip;base64," + content;
+    });
+    return ;
+
+    */
+}
+
+export { importPresentation, zipFile };
