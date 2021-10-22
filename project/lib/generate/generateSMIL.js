@@ -24,6 +24,15 @@ generateSMIL.addEventListener('click', async () => {
     */
 });
 
+
+document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    var code = event.code;
+    if(code == 'ArrowRight' && start)
+    alert(clock.innerHTML);
+    // Alert the key name and key code on keydown
+  });
+
 function copyTemplateSmil(){
     fs.copyFile(__dirname + '/../../lib/templates/timesheet.smil', chemin + 'timesheet.smil', (err) => {
         if (err) {
@@ -47,7 +56,7 @@ function tick(){
 
 function add() {
     tick();
-    console.log(hrs+" "+min+" "+sec);
+    console.log(hrs + " " + min + " " + sec);
     clock.innerHTML = (hrs > 9 ? hrs : "0" + hrs) 
         	 + ":" + (min > 9 ? min : "0" + min)
        		 + ":" + (sec > 9 ? sec : "0" + sec);     
