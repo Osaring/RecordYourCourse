@@ -1,5 +1,4 @@
-import path from 'path';
-const CONST_COURS_PATH;
+const CONST_COURS_PATH="";
 
 var fs = require('fs');
 
@@ -17,7 +16,7 @@ function importPresentation() {
                 copyFileImported(file, extension);
                 zipFile(file, extension);
                 console.log("[importPresentation] success");
-                CONST_COURS_PATH = choosePath();
+                //CONST_COURS_PATH = choosePath();
                 console.log(CONST_COURS_PATH)
             }
         })
@@ -39,6 +38,7 @@ function copyFileImported(file, extension){
 
 function zipFile(file, extension) {
     console.log("[ZipFile] start");
+    console.log(file)
     const splitPath = file.path.split('.');
 
     var oldPath = splitPath[0] + '_copie.' + extension;
