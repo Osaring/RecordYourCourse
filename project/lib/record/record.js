@@ -16,6 +16,7 @@ const downloadRecordFormat = document.querySelector('div#download-record-format'
 const startRecord = document.querySelector('#button-start-record');
 
 startRecord.addEventListener('click', async () => {
+
     if (startRecord.disabled) {
         alert("Un enregistrement est déjà en cours");
         return;
@@ -24,13 +25,16 @@ startRecord.addEventListener('click', async () => {
         downloadRecordFormat.disabled = true;
     }
     await importPresentation().then( response => {
-        if (response === "") { // No file imported
+        console.log(response)
+        if (response == "") { // No file imported
             startButtonEnabled();
             alert("Aucun fichier sélectionné, veullez recommencer")
         } else {
             console.log("import ok et parameters debut")
             parameters(); // Continue program (confirmation message)
             console.log("parameters start")
+
+            console.log(window.CONST_SAVE_COURSE_PATH) // À REVOIR
         }
     })
 });

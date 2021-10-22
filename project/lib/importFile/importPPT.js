@@ -1,6 +1,3 @@
-import path from 'path';
-const CONST_COURS_PATH;
-
 var fs = require('fs');
 
 function importPresentation() {
@@ -17,11 +14,13 @@ function importPresentation() {
                 copyFileImported(file, extension);
                 zipFile(file, extension);
                 console.log("[importPresentation] success");
-                CONST_COURS_PATH = choosePath();
-                console.log(CONST_COURS_PATH)
+
+                CONST_SAVE_COURSE_PATH = choosePath();
+                console.log(CONST_SAVE_COURSE_PATH);
+
+                resolve("ok");
             }
         })
-        resolve("ok");
     })
 }
 
@@ -54,7 +53,13 @@ function zipFile(file, extension) {
 
 function choosePath() {
     path = "test path"
-    return path;
+    document.getElementById('file').click();
+    document.getElementById('file').addEventListener('change', (e) => {
+        if (e.target.files) {
+            const file = e.target.files[0];
+            return file.path;
+        }
+    })
 }
 
 export { importPresentation };
