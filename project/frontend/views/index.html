@@ -59,16 +59,24 @@
         <!-- input for import file -->
         <input type="file" id="file" hidden>
         <div>
-          > Cliquer sur votre support de présentation pour lancer : Camera / Audio / Screen
+          > Cliquer sur le bouton ci-dessous commencer un enregistrement.
+          <br>
           <button class="generate" id="generate">Générer SMIL</button>
           <h3 id='timer'><time>00:00:00</time></h3>
+          <br>
+          <br>
+          <img class="icon-start" id="button-start-record" src="./../images/IconRecord.png" style="width:140px;height:140px" alt="IconRecord" disabled="disabled">
+          <br>
+          <span>@Enregistrer</span>
         </div>
+
+
+        <!--
         <div class="container-icon">
           <div class="icon-ppt">
-              <!--  <img id="button-start" src="./../images/IconPowerPoint.png" style="width:160px;height:160px" onclick="" alt="IconPowerPoint"> -->
-              <img id="button-start-PPT" src="./../images/IconPowerPoint.png" style="width:140px;height:140px" onclick="" alt="IconPowerPoint" disabled>
+              <img id="button-start-record" src="./../images/IconPowerPoint.png" style="width:140px;height:140px" onclick="" alt="IconPowerPoint" disabled>
               <br>
-            <span>@PowerPoint</span>
+            <span>@enregistrer</span>
             <br>
           </div>
           <div class="icon-ppt">
@@ -82,12 +90,14 @@
             <span>@AcrobatReader</span>
           </div>
         </div>
+        -->
+
         <!-- Camera zone -->
         <br>
         <video id="gum" playsinline autoplay muted></video>
         <video id="recorded" playsinline></video>
+
         <!-- echo cancellation -->
-        
         <div>
           <div>
             <h5>Media Stream Constraints options</h5>

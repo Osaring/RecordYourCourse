@@ -13,41 +13,26 @@ const downloadButton = document.querySelector('button#download');
 const recordInProgress = document.querySelector('div#record-in-progress');
 const downloadRecordFormat = document.querySelector('div#download-record-format');
 
-// start buttons
-const startRecordPPT = document.querySelector('img#button-start-PPT');
-const startRecordLO = document.querySelector('img#button-start-LO');
-const startRecordAR = document.querySelector('img#button-start-AR');
+const startRecord = document.querySelector('#button-start-record');
 
-startRecordPPT.addEventListener('click', async () => {
-  if (startRecordPPT.disabled) {
-    alert("Un enregistrement est déjà en cours");
-    return;
-  } else {
-    startButtonDisabled();
-    downloadRecordFormat.disabled = true;
-  }
-
-  // alert("Sélectionner le diapo que vous voulez présenter")
-  if (importPresentation() === "") { // No file imported
-    startButtonEnabled();
-    alert("Aucun fichier sélectionné, veullez recommencer")
-  } else await parameters(); // Continue program (confirmation message)
-});
-
-startRecordLO.addEventListener('click', async () => {
-  if (startRecordLO.disabled) {
-    alert("Un enregistrement est déjà en cours");
-    return;
-  } else startButtonDisabled();
-  await parameters();
-});
-startRecordAR.addEventListener('click', async () => {
-  if (startRecordAR.disabled) {
-    alert("Un enregistrement est déjà en cours");
-    return;
-  }
-  else startButtonDisabled();
-  await parameters();
+startRecord.addEventListener('click', async () => {
+    if (startRecord.disabled) {
+        alert("Un enregistrement est déjà en cours");
+        return;
+    } else {
+        startButtonDisabled();
+        downloadRecordFormat.disabled = true;
+    }
+    await importPresentation().then( response => {
+        if (response === "") { // No file imported
+            startButtonEnabled();
+            alert("Aucun fichier sélectionné, veullez recommencer")
+        } else {
+            console.log("import ok et parameters debut")
+            parameters(); // Continue program (confirmation message)
+            console.log("parameters start")
+        }
+    })
 });
 
 async function parameters() {
@@ -67,6 +52,8 @@ async function parameters() {
   };
   console.log('Using media constraints:', constraints);
   await init(constraints);
+  downloadButton.disabled = true;
+  codecPreferences.disabled = true;
   recordInProgress.hidden = false;
   startRecording();
 };
@@ -183,12 +170,8 @@ function handleSuccess(stream) {
 
 // deactivate/activate start button
 function startButtonDisabled(){
-  startRecordPPT.disabled = true;
-  startRecordLO.disabled = true;
-  startRecordAR.disabled = true;
+  startRecord.disabled = true;
 }
 function startButtonEnabled(){
-  startRecordPPT.disabled = false;
-  startRecordLO.disabled = false;
-  startRecordAR.disabled = false;
+  startRecord.disabled = false;
 }
