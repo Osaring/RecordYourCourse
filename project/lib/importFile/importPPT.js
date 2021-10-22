@@ -6,12 +6,13 @@ function importPresentation() {
         document.getElementById('file').addEventListener('change', (e) => {
             if (e.target.files) {
                 const file = e.target.files[0];
-                console.log("length ", e.target.files.length)
-                const splitFilename = file.name.split('.');
                 console.log("metadata file ", file)
-                console.log("extension file ", splitFilename[splitFilename.length - 1]);
 
-                zipFile(file, splitFilename[0]);
+                const splitFilename = file.name.split('.');
+                const extension = splitFilename[splitFilename.length - 1];
+
+                copyFileImported(file, extension);
+                zipFile(file, extension);
                 console.log("fin importFile")
             }
         })
@@ -19,17 +20,32 @@ function importPresentation() {
     })
 }
 
-function zipFile(file, name) {
+function copyFileImported(file, extension){
+    const splitPath = file.path.split('.');
+    var pathNewFile = splitPath[0] + "_copie." + extension;
+    fs.copyFile(file.path, pathNewFile, (err) => {
+        if (err) {
+            alert("Le fichier importé n'a pas été copié");
+            throw err;
+        }
+    });
+    console.log("fin copyFileImported")
+}
+
+function zipFile(file, extension) {
     console.log("zipFile");
     const splitPath = file.path.split('.');
-    console.log(splitPath);
 
-    var newPath = splitPath[0] + ".zip";
-    console.log(newPath);
+    var oldPath = splitPath[0] + '_copie.' + extension;
+    var newPath = splitPath[0] + '.zip';
+    console.log('splitPath ', oldPath);
+    console.log('splitPath ', newPath);
 
-    fs.rename(file.path, newPath, function(err) {
+    fs.rename(oldPath, newPath , function(err) {
         if ( err ) console.log('ERROR: ' + err);
     });
+
+
 }
 
 export { importPresentation, zipFile };
