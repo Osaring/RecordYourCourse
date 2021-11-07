@@ -38,6 +38,7 @@ function copyFileImported(file, extension){
 
 function zipFile(file, extension) {
     console.log("[ZipFile] start");
+    console.log(file)
     const splitPath = file.path.split('.');
 
     var oldPath = splitPath[0] + '_copie.' + extension;
