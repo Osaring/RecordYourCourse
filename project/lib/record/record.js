@@ -1,4 +1,5 @@
 import { importPresentation } from '../importFile/importPPT.js';
+import { chooseDirectory } from './../chooseDirectory/chooseDirectory.js';
 
 /* globals MediaRecorder */
 var mediaRecorder;
@@ -8,15 +9,13 @@ const codecPreferences = document.querySelector('#codecPreferences');
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('#recorded');
 const stopRecordButton = document.querySelector('button#stop-record');
+const startRecord = document.querySelector('#button-start-record');
 const downloadButton = document.querySelector('button#download');
 
 const recordInProgress = document.querySelector('div#record-in-progress');
 const downloadRecordFormat = document.querySelector('div#download-record-format');
 
-const startRecord = document.querySelector('#button-start-record');
-
 startRecord.addEventListener('click', async () => {
-
     if (startRecord.disabled) {
         alert("Un enregistrement est déjà en cours");
         return;
@@ -24,22 +23,25 @@ startRecord.addEventListener('click', async () => {
         startButtonDisabled();
         downloadRecordFormat.disabled = true;
     }
-    await importPresentation().then( response => {
-        console.log(response)
-        if (response == "") { // No file imported
-            startButtonEnabled();
-            alert("Aucun fichier sélectionné, veullez recommencer")
-        } else {
-            console.log("import ok et parameters debut")
-            parameters(); // Continue program (confirmation message)
-            console.log("parameters start")
-
-            console.log(window.CONST_SAVE_COURSE_PATH) // À REVOIR
-        }
-    })
+    beginRecord();
 });
 
-async function parameters() {
+async function beginRecord(){
+  await chooseDirectory().then( response => {
+      console.log(response)
+      if (response == "") { // No file imported
+          startButtonEnabled();
+          alert("Aucun fichier sélectionné, veullez recommencer");
+      } else {
+          importPresentation().then( response => {
+              parametersRecord();
+          })
+      }
+  })
+};
+
+async function parametersRecord() {
+  console.log("[parameters] start]")
   if (window.confirm("Confirmer pour lancer la caméra et l'enregistrement")) {
   } else {
     alert("Arrêt de l'enregistrement");
@@ -71,7 +73,6 @@ stopRecordButton.addEventListener('click', () => {
     downloadRecordFormat.disabled = false;
     startButtonEnabled();
 });
-
 function stopRecording() {
   mediaRecorder.stop();
   const gumVideo = document.querySelector('video#gum');
@@ -84,6 +85,8 @@ function closeWebcamConnection(){
     track.stop();
   })
 }
+
+
 
 downloadButton.addEventListener('click', () => {
   const blob = new Blob(recordedBlobs, {type: 'video/webm'});

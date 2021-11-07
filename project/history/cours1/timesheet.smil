@@ -4,7 +4,7 @@
   <!-- slideshow -->
   <excl timeAction="intrinsic" dur="1:04:28"
         mediaSync="#talk" controls="#timeController" navigation="arrows; hash">
-  <!--  <item select="#diapo01" begin="0:00:00"/>
+    <!--  <item select="#diapo01" begin="0:00:00"/>
     <item select="#diapo02" begin="0:03:30"/>
     <item select="#diapo03" begin="0:10:50"/>
     <item select="#diapo04" begin="0:12:39"/>
@@ -17,7 +17,7 @@
     <item select="#diapo11" begin="0:37:42"/>
     <item select="#diapo12" begin="0:40:27"/>
     <item select="#diapo13" begin="0:40:47"/>
-    <item select="#diapo14" begin="0:41:57"/>
+    <item select="#diapo14" begin="0:41:57"/> 
     <item select="#diapo15" begin="0:42:57"/>
     <item select="#diapo16" begin="0:43:34"/>
     <item select="#diapo17" begin="0:44:54"/>

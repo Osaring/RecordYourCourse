@@ -2,6 +2,9 @@ var fs = require('fs');
 
 function importPresentation() {
     return new Promise((resolve, reject) => {
+        console.log("test")
+        alert("Sélectionner le PowerPoint que vous voulez présenter.")
+        console.log("test after alert")
         document.getElementById('file').click();
         document.getElementById('file').addEventListener('change', (e) => {
             if (e.target.files) {
@@ -14,13 +17,10 @@ function importPresentation() {
                 copyFileImported(file, extension);
                 zipFile(file, extension);
                 console.log("[importPresentation] success");
-
-                CONST_SAVE_COURSE_PATH = choosePath();
-                console.log(CONST_SAVE_COURSE_PATH);
-
-                resolve("ok");
+                resolve("promise import");
             }
         })
+
     })
 }
 
@@ -49,17 +49,6 @@ function zipFile(file, extension) {
         if ( err ) console.log('ERROR: ' + err);
     });
     console.log("[ZipFile] success")
-}
-
-function choosePath() {
-    path = "test path"
-    document.getElementById('file').click();
-    document.getElementById('file').addEventListener('change', (e) => {
-        if (e.target.files) {
-            const file = e.target.files[0];
-            return file.path;
-        }
-    })
 }
 
 export { importPresentation };

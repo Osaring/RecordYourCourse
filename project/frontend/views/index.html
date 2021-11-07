@@ -29,7 +29,7 @@
       <div class="w3-bar-block">
         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
         <a href="#commandes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Commandes<samp></samp></a>
-        <a href="#videos-saved" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vidéos enregistrées</a>
+        <a href="#videos-saved" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cours enregistrées</a>
         <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
       </div>
     </nav>
@@ -46,7 +46,7 @@
     <div class="w3-main" style="margin-left:340px;margin-right:40px">
       <!-- Header -->
       <div class="w3-container" style="margin-top:80px" id="#">
-        <h1 class="w3-jumbo"><b>Record Your Courses</b></h1>
+        <h1 class="w3-jumbo"><b><img src="./../images/logoRecordYourCourse.png" style="width:60px;height:60px;"> Record Your Courses</b></h1>
         <h1 id="commandes" class="w3-xxxlarge w3-text-red" style="margin-top:2%"><b>Commandes.</b>
           <hr style="width:50px;border:5px solid red" class="w3-round">
         </h1>
@@ -56,8 +56,6 @@
         <h2 class="w3-xxxlarge w3-text-black"><b><i class="fa fa-play-circle-o"></i> Enregistrer.</b></h2>
       </div>
       <div class="w3-row-padding">
-        <!-- input for import file -->
-        <input type="file" id="file" hidden>
         <div>
           > Cliquer sur le bouton ci-dessous commencer un enregistrement.
           <br>
@@ -105,33 +103,7 @@
               <br>
             </div>
           </div>
-
         </div>
-      </div>
-
-      <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
-
-      <!-- Modal for full size images on click-->
-      <div class="w3-container" style="margin-top:30px" id="">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Text modal.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-      </div>
-      <div id="modal01" class="w3-modal w3-black" style="padding-top:0; margin-top:30px;" onclick="this.style.display='none'">
-        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-          <img id="img01" class="w3-image">
-          <p id="caption"></p>
-        </div>
-      </div>
-
-      <!-- Commandes -->
-      <div class="w3-container" style="margin-top:20px">
-        <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-        <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
       </div>
 
       <!-- W3.CSS Container -->
@@ -139,7 +111,7 @@
 
       <!-- Header -->
       <div class="w3-container" style="margin-top:20px" id="#">
-        <h1 id="videos-saved" class="w3-xxxlarge w3-text-red"><b>Vidéos enregistrées.</b></h1>
+        <h1 id="videos-saved" class="w3-xxxlarge w3-text-red"><b>Cours enregistrés.</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
       </div>
 
@@ -178,7 +150,10 @@
       </div>
 
       <button id="test">test</button>
-
+      <!-- input for choosePath file -->
+      <input type="file" id="inputChoosePath" hidden>
+      <!-- input for import file -->
+      <input type="file" id="file" hidden>
 
       <!-- W3.CSS Container -->
       <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
@@ -224,6 +199,7 @@
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script type="module" src="../../lib/record/record.js"></script>
     <script type="module" src="../../lib/importFile/importPPT.js"></script>
+    <script type="module" src="../../lib/chooseDirectory/chooseDirectory.js"></script>
     <script type="module" src="../../lib/generate/generateSMIL.js"></script>
 
   </body>
