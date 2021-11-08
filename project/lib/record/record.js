@@ -27,13 +27,13 @@ startRecord.addEventListener('click', async () => {
 });
 
 async function beginRecord(){
-  await chooseDirectory().then( response => {
-      console.log(response)
-      if (response == "") { // No file imported
+  await chooseDirectory().then( responseChooseDirectory => {
+      if (responseChooseDirectory == "") { // No file imported
           startButtonEnabled();
           alert("Aucun fichier sélectionné, veullez recommencer");
       } else {
-          importPresentation().then( response => {
+          console.log("[Response directory path] ", responseChooseDirectory)
+          importPresentation(responseChooseDirectory).then(response => {
               parametersRecord();
           })
       }
