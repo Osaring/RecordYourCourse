@@ -73,7 +73,7 @@ les commentaires, les engagements, le code, les éditions wiki, les problèmes e
 
 Ce code de conduite s'applique dans tous les espaces de communauté, mais il est aussi valable
 quand vous représentez individuellement la communauté dans un espace public. Des exemples de représentation comme l'utilisation d'une adresse mail officielle, postée sur les réseaux sociaux avec un compte officiel, ou bien montrer que le produit est de qualité lors des événements online ou réel.
- 
+
 ## Signalements de mauvais comportements
 
 Des cas de comportement abusif, harcelant ou autrement inacceptable peuvent être

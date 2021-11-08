@@ -28,7 +28,6 @@ Ce qui suit est un ensemble de directives pour contribuer à Record Your Course 
   * [Guides de style Documentation](#documentation-styleguide)
 
 [Notes complémentaires](#additional-notes)
-  * [Libellés d'émission et de demande d'extraction](#issue-and-pull-request-labels)
 
 ## Code de conduite
 Ce projet et toutes les personnes qui y participent sont régis par le code de conduite Record Your Courses. En participant, vous êtes censé respecter ce code. Veuillez signaler tout comportement inacceptable.
@@ -39,9 +38,9 @@ Ce projet et toutes les personnes qui y participent sont régis par le code de c
 
 ## Que dois-je savoir avant de commencer ?
 ### Packages de RecordYourCourse
-Record Your Course est un grand projet open source - il est composé de plus de 200 référentiels. Lorsque vous envisagez initialement de contribuer à Record Your Course, vous ne savez peut-être pas lequel de ces 200 référentiels implémente la fonctionnalité que vous souhaitez modifier ou pour laquelle vous souhaitez signaler un bogue. Cette section devrait vous y aider.
+Record Your Course est un projet open source qui a possiblement été duppliqué plusieurs fois. Lorsque vous envisagez initialement de contribuer à Record Your Course, vous ne savez peut-être pas lequel de ces référentiels implémente la fonctionnalité que vous souhaitez modifier ou pour laquelle vous souhaitez signaler un bogue. Cette section devrait vous y aider.
 
-Record Your Course est volontairement très modulaire. Presque tous les éléments d'interface utilisateur non-éditeur avec lesquels vous interagissez proviennent d'un package, même des éléments fondamentaux. 
+Record Your Course est volontairement très modulaire. Presque tous les éléments d'interface utilisateur non-éditeur avec lesquels vous interagissez proviennent d'un package, même des éléments fondamentaux.
 
 
 Pour avoir une idée des packages fournis avec Record Your Course, vous pouvez accéder à <Paramètres> Packages dans Record Your Course et consulter la section Packages de base.
@@ -52,24 +51,26 @@ De plus, comme Record Your Course est si extensible, il est possible qu'une fonc
 
 ### Design de RecordYourCourse
 
-When we make a significant decision in how we maintain the project and what we can or cannot support, we will document it in the [atom/design-decisions repository](https://github.com/atom/design-decisions). If you have a question around how we do things, check to see if it is documented there. If it is *not* documented there, please open a new topic on [Github Discussions, the official Atom message board](https://github.com/atom/atom/discussions) and ask your question.
+Lorsque nous prenons une décision importante sur la façon dont nous maintenons le projet et sur ce que nous pouvons ou ne pouvons pas supporter, nous la documentons dans le [dépôt atom/design-decisions] (https://github.com/atom/design-decisions). Si vous avez une question sur la façon dont nous faisons les choses, vérifiez si elle y est documentée. Si ce n'est *pas* le cas, ouvrez un nouveau sujet sur [Github Discussions, le forum officiel d'Atom] (https://github.com/atom/atom/discussions) et posez votre question.
 
 ## Comment puis-je contribuer?
 
 ### Signaler des Bugs
 
-This section guides you through submitting a bug report for Atom. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
+Cette partie va vous montrer la procédure à suivre pour signaler des bugs. Suivez les guides de maintien du projet et la communauté pourra comprendre votre signalement :pencil:, repreoduire le comportement :computer: :computer:, et trouver des signalements identiques :mag_right:.
 
-Before creating bug reports, please check [this list](#before-submitting-a-bug-report) as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](#how-do-i-submit-a-good-bug-report). Fill out [the required template](https://github.com/atom/.github/blob/master/.github/ISSUE_TEMPLATE/bug_report.md), the information it asks for helps us resolve issues faster.
+Avant de créer un rapport de bogue, veuillez consulter [cette liste](#before-submitting-a-bug-report) car vous pourriez découvrir que vous n'avez pas besoin d'en créer un. Lorsque vous créez un rapport de bogue, veuillez [inclure autant de détails que possible](#how-do-i-submit-a-good-bug-report). Remplissez [le modèle requis](https://github.com/atom/.github/blob/master/.github/ISSUE_TEMPLATE/bug_report.md), les informations demandées nous aident à résoudre les problèmes plus rapidement.
 
-> **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+Traduit avec www.DeepL.com/Translator (version gratuite)
 
-Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). After you've determined [which repository](#atom-and-packages) your bug is related to, create an issue on that repository and provide the following information by filling in [the template](https://github.com/atom/.github/blob/master/.github/ISSUE_TEMPLATE/bug_report.md).
+> **Note:** Si vous trouvez un problème **Clos** qui semble être le même que celui que vous rencontrez, ouvrez un nouveau problème et incluez un lien vers le problème original dans le corps de votre nouveau problème.
 
-Explain the problem and include additional details to help maintainers reproduce the problem:
+Les bogues sont suivis en tant que [problèmes GitHub](https://guides.github.com/features/issues/). Créer un problème sur ce référentiel et fournissez les informations suivantes en remplissant [le modèle](https://github.com/atom/.github/blob/master/.github/ISSUE_TEMPLATE/bug_report.md).
 
-* **Use a clear and descriptive title** for the issue to identify the problem.
-* **Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you started Atom, e.g. which command exactly you used in the terminal, or how you started Atom otherwise. When listing steps, **don't just say what you did, but explain how you did it**. For example, if you moved the cursor to the end of a line, explain if you used the mouse, or a keyboard shortcut or an Atom command, and if so which one?
+Expliquez le problème et incluez des détails supplémentaires pour aider les responsables à reproduire le problème :
+
+* **Utiliser un titre et une description clair** pour les issues afin d'identifier le problème.
+* **Décrivez précisément les étapes permettant de reproduire le problème** avec autant de détails que possible. Par exemple, commencez par expliquer comment vous avez démarré Atom, c'est-à-dire quelle commande exactement vous avez utilisée dans le terminal, ou comment vous avez démarré Atom autrement. Lorsque vous énumérez les étapes, **ne dites pas seulement ce que vous avez fait, mais expliquez aussi comment vous avez fait**. Par exemple, si vous avez déplacé le curseur à la fin d'une ligne, expliquez si vous avez utilisé la souris ou un raccourci clavier, et si oui, lequel ?
 * **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 * **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
 * **Explain which behavior you expected to see instead and why.**
@@ -88,7 +89,7 @@ Provide more context by answering these questions:
 * If the problem is related to working with files (e.g. opening and editing files), **does the problem happen for all files and projects or only some?** Does the problem happen only when working with local or remote files (e.g. on network drives), with files of a specific type (e.g. only JavaScript or Python files), with large files or files with very long lines, or with files in a specific encoding? Is there anything else special about the files you are using?
 
 Include details about your configuration and environment:
-* **Which version of Atom are you using?** You can get the exact version by running `atom -v` in your terminal, or by starting Atom and running the `Application: About` command from the [Command Palette](https://github.com/atom/command-palette).
+* **Quelle version de Record Your Course utilisz-vous ?** Vous pouvez avoir la version exact de Record Your Course `atom -v`, or by starting Atom and running the `Application: About` command from the [Command Palette](https://github.com/atom/command-palette).
 * **What's the name and version of the OS you're using**?
 * **Are you running Atom in a virtual machine?** If so, which VM software are you using and which operating systems and versions are used for the host and the guest?
 * **Which [packages](#atom-and-packages) do you have installed?** You can get that list by running `apm list --installed`.
@@ -98,7 +99,7 @@ Include details about your configuration and environment:
 
 #### Faire des suggestions
 
-This section guides you through submitting an enhancement suggestion for Atom, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
+Cette section vous guide dans la soumission d'une suggestion d'amélioration pour Atom, qu'il s'agisse de nouvelles fonctionnalités ou d'améliorations mineures de fonctionnalités existantes. Le respect de ces directives permet aux responsables et à la communauté de comprendre votre suggestion :pencil : et de trouver des suggestions connexes :mag_right :.
 
 Before creating enhancement suggestions, please check [this list](#before-submitting-an-enhancement-suggestion) as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please [include as many details as possible](#how-do-i-submit-a-good-enhancement-suggestion). Fill in [the template](https://github.com/atom/.github/blob/master/.github/ISSUE_TEMPLATE/feature_request.md), including the steps that you imagine you would take if the feature you're requesting existed.
 
@@ -124,33 +125,27 @@ Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com
 Unsure where to begin contributing to Atom? You can start by looking through these `beginner` and `help-wanted` issues:
 
 * [Beginner issues][beginner] - issues which should only require a few lines of code, and a test or two.
-* [Help wanted issues][help-wanted] - issues which should be a bit more involved than `beginner` issues.
 
 Both issue lists are sorted by total number of comments. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
 
 If you want to read about using Atom or developing packages in Atom, the [Atom Flight Manual](https://flight-manual.atom.io) is free and available online. You can find the source to the manual in [atom/flight-manual.atom.io](https://github.com/atom/flight-manual.atom.io).
 
-Atom Core and all packages can be developed locally. For instructions on how to do this, see the following sections in the [Atom Flight Manual](https://flight-manual.atom.io):
-
-* [Hacking on Atom Core][hacking-on-atom-core]
-* [Contributing to Official Atom Packages][contributing-to-official-atom-packages]
-
 ### Pull Requests
 
-The process described here has several goals:
+Le processus décrit ici a plusieurs objectifs :
 
-- Maintain Atom's quality
-- Fix problems that are important to users
-- Engage the community in working toward the best possible Atom
-- Enable a sustainable system for Atom's maintainers to review contributions
+- Maintenir la qualité d'Atom
+- Corriger les problèmes qui sont importants pour les utilisateurs
+- Faire participer la communauté à l'élaboration du meilleur Atom possible
+- mettre en place un système durable permettant aux responsables d'Atom d'examiner les contributions.
 
-Please follow these steps to have your contribution considered by the maintainers:
+Veuillez suivre les étapes suivantes pour que votre contribution soit prise en compte par les responsables :
 
-1. Follow all instructions in [the template](PULL_REQUEST_TEMPLATE.md)
-2. Follow the [styleguides](#styleguides)
-3. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing <details><summary>What if the status checks are failing?</summary>If a status check is failing, and you believe that the failure is unrelated to your change, please leave a comment on the pull request explaining why you believe the failure is unrelated. A maintainer will re-run the status check for you. If we conclude that the failure was a false positive, then we will open an issue to track that problem with our status check suite.</details>
+1. Suivez toutes les instructions du [modèle] (PULL_REQUEST_TEMPLATE.md).
+2. Suivez les [guides de style](#styleguides)
+3. Après avoir soumis votre pull request, vérifiez que toutes les [vérifications d'état](https://help.github.com/articles/about-status-checks/) passent <details><summary>Que faire si les vérifications d'état échouent?</summary>Si une vérification d'état échoue, et que vous pensez que l'échec n'est pas lié à votre modification, veuillez laisser un commentaire sur la pull request expliquant pourquoi vous pensez que l'échec n'est pas lié. Un mainteneur effectuera à nouveau la vérification d'état pour vous. Si nous concluons que l'échec était un faux positif, nous ouvrirons une question pour suivre ce problème avec notre suite de vérification d'état.</details>
 
-While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
+Bien que les conditions préalables ci-dessus doivent être remplies avant que votre demande d'extraction ne soit examinée, le ou les examinateurs peuvent vous demander d'effectuer des travaux de conception supplémentaires, des tests ou d'autres modifications avant que votre demande d'extraction ne soit finalement acceptée.
 
 ## Guides de style
 
@@ -180,7 +175,7 @@ While the prerequisites above must be satisfied prior to having your pull reques
 
 ### Guides de style NodeJS
 
-All JavaScript code is linted with [Prettier](https://prettier.io/).
+All JavaScript code is linted with [eslint](https://eslint.io/).
 
 * Prefer the object spread operator (`{...anotherObj}`) to `Object.assign()`
 * Inline `export`s with expressions whenever possible
@@ -219,16 +214,6 @@ All JavaScript code is linted with [Prettier](https://prettier.io/).
 
 ## Notes complémentaires
 
-### Libellés d'émission et de demande d'extraction
-
-This section lists the labels we use to help us track and manage issues and pull requests. Most labels are used across all Atom repositories, but some are specific to `atom/atom`.
-
-[GitHub search](https://help.github.com/articles/searching-issues/) makes it easy to use labels for finding groups of issues or pull requests you're interested in. For example, you might be interested in [open issues across `atom/atom` and all Atom-owned packages which are labeled as bugs, but still need to be reliably reproduced](https://github.com/search?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+user%3Aatom+label%3Abug+label%3Aneeds-reproduction) or perhaps [open pull requests in `atom/atom` which haven't been reviewed yet](https://github.com/search?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+repo%3Aatom%2Fatom+comments%3A0). To help you find issues and pull requests, each label is listed with search links for finding open items with that label in `atom/atom` only and also across all Atom repositories. We  encourage you to read about [other search filters](https://help.github.com/articles/searching-issues/) which will help you write more focused queries.
-
-The labels are loosely grouped by their purpose, but it's not required that every issue has a label from every group or that an issue can't have more than one label from the same group.
-
-Please open an issue on `atom/atom` if you have suggestions for new labels, and if you notice some labels are missing on some repositories, then please open an issue on that repository.
-
 #### Type of Issue and Issue State
 
 | Label name | `atom/atom` :mag_right: | `atom`‑org :mag_right: | Description |
@@ -266,20 +251,6 @@ Please open an issue on `atom/atom` if you have suggestions for new labels, and 
 | `encoding` | [search][search-atom-repo-label-encoding] | [search][search-atom-org-label-encoding] | Related to character encoding. |
 | `network` | [search][search-atom-repo-label-network] | [search][search-atom-org-label-network] | Related to network problems or working with remote files (e.g. on network drives). |
 | `git` | [search][search-atom-repo-label-git] | [search][search-atom-org-label-git] | Related to Git functionality (e.g. problems with gitignore files or with showing the correct file status). |
-
-#### `atom/atom` Topic Categories
-
-| Label name | `atom/atom` :mag_right: | `atom`‑org :mag_right: | Description |
-| --- | --- | --- | --- |
-| `editor-rendering` | [search][search-atom-repo-label-editor-rendering] | [search][search-atom-org-label-editor-rendering] | Related to language-independent aspects of rendering text (e.g. scrolling, soft wrap, and font rendering). |
-| `build-error` | [search][search-atom-repo-label-build-error] | [search][search-atom-org-label-build-error] | Related to problems with building Atom from source. |
-| `error-from-pathwatcher` | [search][search-atom-repo-label-error-from-pathwatcher] | [search][search-atom-org-label-error-from-pathwatcher] | Related to errors thrown by the [pathwatcher library](https://github.com/atom/node-pathwatcher). |
-| `error-from-save` | [search][search-atom-repo-label-error-from-save] | [search][search-atom-org-label-error-from-save] | Related to errors thrown when saving files. |
-| `error-from-open` | [search][search-atom-repo-label-error-from-open] | [search][search-atom-org-label-error-from-open] | Related to errors thrown when opening files. |
-| `installer` | [search][search-atom-repo-label-installer] | [search][search-atom-org-label-installer] | Related to the Atom installers for different OSes. |
-| `auto-updater` | [search][search-atom-repo-label-auto-updater] | [search][search-atom-org-label-auto-updater] | Related to the auto-updater for different OSes. |
-| `deprecation-help` | [search][search-atom-repo-label-deprecation-help] | [search][search-atom-org-label-deprecation-help] | Issues for helping package authors remove usage of deprecated APIs in packages. |
-| `electron` | [search][search-atom-repo-label-electron] | [search][search-atom-org-label-electron] | Issues that require changes to [Electron](https://electron.atom.io) to fix or implement. |
 
 #### Pull Request Labels
 

@@ -4,10 +4,7 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
-  <h2 align="center">Record Your Courses</h2>
-  <br>
   <p>
     <img style="width:200px; height;70px;" src="./project/frontend/images/recordYourCourse.png">
   </p>
@@ -19,11 +16,11 @@
 <!-- TABLE OF CONTENTS -->
 <div>
   <summary>Table des matières</summary>
-  <ol>
+  <ol></ol>
     <li>
       <a href="#about-the-project">A propos du projet</a>
       <ul>
-        <li><a href="#built-with">Technologies utilisées</a></li>
+        <li><a href="#technos">Technologies utilisées</a></li>
       </ul>
     </li>
     <li>
@@ -33,7 +30,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#contributing">Contribution</a></li>
+    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">Licence</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Remerciements</a></li>
@@ -41,14 +38,16 @@
 </div>
 
 <!-- A PROPOS DU PROJET -->
-## A propros du projet
+<div id="about-the-project"></div>
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+## A propros du projet
 
 Ce projet consiste à créer un mini logiciel permettant d’enregistrer les cours des enseignants s’ils le souhaitent, et ceci permettra aux étudiants de visualiser les cours à distance en cas de besoin.
 
 L’enregistrement contiendra, la vidéo du professeur mais aussi le cours en question ainsi que sa table des matières qui permettra de se positionner pour regarder la partie qu’on souhaite de la vidéo.
 
+
+<div id="technos"></div>
 
 ### Technologies utilisées
 
@@ -57,10 +56,14 @@ L’enregistrement contiendra, la vidéo du professeur mais aussi le cours en qu
 * [Bootstrap](https://getbootstrap.com)
 
 <!-- LANCEMENT -->
+<div id="getting-started"></div>
+
 ## Lancement du projet
 
 Il s'agit d'un exemple de la façon dont on peut installer ce projet localement.
 Pour mettre en place une copie locale et la faire fonctionner, il faut suivre les étapes ci-dessous.
+
+<div id="prerequisites"></div>
 
 ### Prérequis
 
@@ -68,6 +71,9 @@ Pour mettre en place une copie locale et la faire fonctionner, il faut suivre le
   ```sh
   https://nodejs.org/en/download/
   ```
+
+<div id="installation"></div>
+
 ### Installation
 
 1. Cloner le projet
@@ -88,6 +94,8 @@ Pour mettre en place une copie locale et la faire fonctionner, il faut suivre le
    ```
 
 <!-- CONTRIBUTION -->
+<div id="contributing"></div>
+
 ## Contribution
 
 Pour contribuer au projet, des informations techniques sont détaillées dans le fichier `CONTRIBUTING.md`.
@@ -109,13 +117,17 @@ développeurs est requise pour être merge sur la branche principale.
 
 
 <!-- LICENCE -->
+<div id="license"></div>
+
 ## Licence
 
-Ce projet est diffusé sous la licence GNU 3. 
+Ce projet est diffusé sous la licence GNU 3.
 Lire le fichier `LICENSE.txt` pour plus d'informations.
 
 
 <!-- CONTACT -->
+<div id="contact"></div>
+
 ## Contact
 
 Nom :  [@RecordYourCourse](https://twitter.com/) - official@recordyourcourse.com
@@ -123,15 +135,15 @@ Lien du projet : [https://github.com/Osaring/RecordYourCourse](https://github.co
 
 <!-- REMERCIEMENTS -->
 ## Remerciements
+<div id="acknowledgments"></div>
+
 Utilisez cet espace pour lister les ressources que vous trouvez utiles. Voici quelques-unes pour lancer les choses !
 
 * [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+* [npm Electron](https://electronjs.org)
+* [npm zipFile](https://www.npmjs.com/package/jszip)
 
-<p align="right"><a href="#top">Top</a></p>
+<p align="right"><a href="#top"><b>Revenir à la table des matières</b></a></p>
