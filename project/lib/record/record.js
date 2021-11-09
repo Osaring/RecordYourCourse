@@ -17,7 +17,7 @@ const downloadRecordFormat = document.querySelector('div#download-record-format'
 
 startRecord.addEventListener('click', async () => {
     if (startRecord.disabled) {
-        alert("Un enregistrement est déjà en cours");
+        alert("Un enregistrement est déjà en cours.");
         return;
     } else {
         startButtonDisabled();
@@ -28,15 +28,20 @@ startRecord.addEventListener('click', async () => {
 
 async function beginRecord(){
   await chooseDirectory().then( responseChooseDirectory => {
-      if (responseChooseDirectory == "") { // No file imported
+    if (responseChooseDirectory === "") {
+      startButtonEnabled();
+      alert("Pas de chemin sélectionner, veuillez recommencer.");
+    } else {
+      console.log("[Response directory path] ", responseChooseDirectory)
+      importPresentation(responseChooseDirectory).then(responseImport => {
+        if (responseImport === "") {
           startButtonEnabled();
-          alert("Aucun fichier sélectionné, veullez recommencer");
-      } else {
-          console.log("[Response directory path] ", responseChooseDirectory)
-          importPresentation(responseChooseDirectory).then(response => {
-              parametersRecord();
-          })
-      }
+          alert("Aucun fichier sélectionné, veullez recommencer.");
+        } else {
+          parametersRecord();
+        }
+      })
+    }
   })
 };
 
@@ -71,6 +76,7 @@ stopRecordButton.addEventListener('click', () => {
     codecPreferences.disabled = false;
     recordInProgress.hidden = true;
     downloadRecordFormat.disabled = false;
+    downloadButton.click(); // download video
     startButtonEnabled();
 });
 function stopRecording() {
@@ -94,7 +100,7 @@ downloadButton.addEventListener('click', () => {
   const a = document.createElement('a');
   a.style.display = 'none';
   a.href = url;
-  a.download = 'test.webm';
+  a.download = 'video.webm';
   document.body.appendChild(a);
   a.click();
   setTimeout(() => {

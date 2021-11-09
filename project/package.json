@@ -4,7 +4,7 @@
   "description": "***\r ```\r $ git clone \r $ cd ./.../\r $ npm i\r $ ...\r ```",
   "main": "index.js",
   "scripts": {
-    "start": "electron . --trace-deprecation",
+    "start": "electron .",
     "dev": "nodemon --exec npx electron ."
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Osaring/RecordYourCourse#readme",
   "dependencies": {
     "electron": "^15.1.2",
+    "fs-extra": "^8.1.0",
     "nodemon": "^2.0.13"
   }
 }

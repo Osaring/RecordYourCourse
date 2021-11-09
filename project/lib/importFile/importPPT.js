@@ -1,3 +1,4 @@
+
 var fs = require('fs');
 
 function importPresentation(choosePathDirectory) {
@@ -16,6 +17,10 @@ function importPresentation(choosePathDirectory) {
                 const pathZipFile = zipFile(file, extension);
                 moveFile(file, pathZipFile, choosePathDirectory)
                 console.log("[importPresentation] success");
+
+                // modify index html
+                // modifyIndex("test");
+
                 resolve("promise import");
             }
         })
@@ -53,21 +58,24 @@ function zipFile(file, extension) {
 function moveFile(file, pathZipFile, choosePathDirectory){
     const splitName = file.name.split('.');
     choosePathDirectory += splitName[0] + '.zip'
-    fs.copyFile(pathZipFile, choosePathDirectory, (err) => {
-        if (err) {
-            alert("Le fichier zippé a été déplacé dans le nouveau répertoire");
-            throw err;
+
+    new Promise((resolve, reject) => {
+        fs.copyFileSync(pathZipFile, choosePathDirectory, fs.constants.COPYFILE_FICLONE, (err) => {
+            if (err) throw err;
+            resolve('success');
+        })
+    })
+    .then((response) => {
+        if(response = 'success'){
+            fs.unlink(pathZipFile, function(err) {
+                if(err) throw err;
+                console.log('[Delete old zip file] success');
+            });
+            console.log("[MoveFile] success");
         }
-    })
-    .then( res => {
-        if (confirm('Voulez-vous supprimer l\'ancien fichier suivant : ' + pathZipFile)) {
-            fs.unlinkSync(pathZipFile); // /!\ delete old file zip
-            console.log('[Delete old zip file] success');
-          } else {
-            console.log('[Delete old zip file] forbidden');
-          }
-        console.log("[MoveFile] success");
-    })
+    });
 }
 
-export { importPresentation };
+export {
+    importPresentation
+};

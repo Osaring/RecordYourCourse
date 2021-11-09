@@ -1,4 +1,5 @@
-var fs = require('fs');
+const fs = require('fs');
+const fse = require('fs-extra');
 
 function chooseDirectory() {
     return new Promise((resolve, reject) => {
@@ -27,13 +28,31 @@ function chooseDirectory() {
 
 function createRepository(newDirectoryPath){
     var path = newDirectoryPath + 'newCourse/';
-    var i =1;
+    var i = 1;
     while (fs.existsSync(path)){
         path = newDirectoryPath + 'newCourse_' + i + '/';
         i += 1;
     }
+    const pathTemplateCourse = __dirname + '/../../lib/templateCourse/';
+
+    // Create repo for new course
     fs.mkdirSync(path);
+    fs.mkdirSync(path + 'slides/');
+
+    // reste à copier les slides du xml ici
+
+    // Copy index.html & timesheet.smil from templateCourse into newCourse
+    fs.copyFile(pathTemplateCourse + 'index.html', path + 'index.html', (err) => {
+        if (err) throw err;
+    })
+    fs.copyFile(pathTemplateCourse + 'timesheet.smil', path + 'timesheet.smil', (err) => {
+        if (err) throw err;
+    })
+    fse.copySync(pathTemplateCourse + '../../frontend/css/course/', path + 'css');
     return path;
 }
 
-export { chooseDirectory };
+
+export {
+    chooseDirectory
+};
