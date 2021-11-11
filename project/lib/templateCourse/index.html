@@ -3,17 +3,13 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title> Le changement climatique vu par les végétaux </title>
-  <link rel="timesheet" href="timesheet.smil">
+  <title> New course </title>
+  <link rel="timesheet" href="controls/timesheet.smil">
   <link rel="stylesheet" type="text/css" href="css/layout.css">
-
   <link rel="alternate stylesheet" title="brown" type="text/css" href="css/theme-brown.css">
-  <link rel="alternate stylesheet" title="cream" type="text/css" href="style/theme-cream.css">
-  <link rel="alternate stylesheet" title="green" type="text/css" href="style/theme-green.css">
-  <link rel="alternate stylesheet" title="blue"  type="text/css" href="style/theme-blue.css">
 
-  <script type="text/javascript" src="../timesheets.js"></script>
-  <script type="text/javascript" src="../timesheets-controls.js"></script>
+  <script type="text/javascript" src="controls/timesheets.js"></script>
+  <script type="text/javascript" src="controls/timesheets-controls.js"></script>
   <!-- conflicts with timesheets-controls.js, FIXME
     <script type="text/javascript" src="../timesheets-navigation.js"></script>
     -->
@@ -50,23 +46,21 @@
         <a href="audio">audio</a> vidéo
       </span>
     </div>
-    <h1> Le changement climatique vu par les végétaux </h1>
-    <p> Bernard Seguin, Institut National de Recherche Agronomique. </p>
+    <h1> DLL 5 - Record Your Course. </h1>
+    <p> Mr X, Université Paris-Saclay. </p>
   </header>
 
   <div id="slideshow" class="cross-fade">
-    <button id="swap"><span>⤢</span></button>
+    <button id="swap"><span style="color:black;">⤢</span></button>
 
     <div id="images">
-      <img id="diapo01"  src="images/img1.png">
-      <img id="diapo02"  src="images/img2.png">
-
+      <img id="diapo01"  src="images/slide01.png">
+      <img id="diapo02"  src="images/slide02.png">
     </div>
 
-    <video id="talk" width="320" height="240" poster="images/BSeguin-640.jpg" autoplay>
+    <!-- <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay> -->
+    <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay>
       <source type="video/webm" src="video.webm"/>
-      <source type="video/ogg"  src="http://wam.inrialpes.fr/timesheets/media/BSeguin.ogv" />
-      <source type="video/mp4"  src="http://wam.inrialpes.fr/timesheets/media/BSeguin.m4v" />
     </video>
 
     <nav id="timeController">
@@ -74,23 +68,7 @@
       <div class="smil-toc">
         <ul class="smil-tocList">
           <li><a href="#diapo01">Introduction</a></li>
-          <li><a href="#diapo02">1- Impacts sur la production végétale</a>
-            <ul>
-              <li><a href="#diapo03">CO2 et photosynthèse</a></li>
-              <li><a href="#diapo06">Cultures annuelles</a></li>
-              <li><a href="#diapo08">Arbres fruitiers / Vigne</a></li>
-            </ul>
-          </li>
-          <li><a href="#diapo10">2- Adaptation des sytèmes de culture</a>
-            <ul>
-              <li><a href="#diapo13">La vigne</a></li>
-              <li><a href="#diapo18">La forêt</a></li>
-            </ul>
-          </li>
-          <li><a href="#diapo25">3- Maladies et insectes</a></li>
-          <li><a href="#diapo27">4- Écosystèmes naturels</a></li>
-          <li><a href="#diapo30">5- Scénarios climatiques : limites actuelles</a></li>
-          <li><a href="#diapo37">Conclusion</a></li>
+          <li><a href="#diapo02">1- Titre 1</a></li>
         </ul>
       </div>
 
@@ -114,13 +92,13 @@
 
   <footer>
     <p>
-      Conférence <a href="http://www.formaterre.fr/">Formaterre</a> du 26 octobre 2007
+      Cours <a href="#">xxxxxxx</a> du MM octobre YYYY
     </p>
     <p>
-      Post-production : Gérard Vidal
+      Post-production : M2 MIAGE
       — Synchronisation : <a
       href="http://wam.inrialpes.fr/timesheets/">timesheets.js</a>
-      — © 2007 <a href="http://www.ens-lyon.eu/">ENS-Lyon</a>
+      — © 2021 <a href="https://www.univ-evry.fr/universite/luniversite-paris-saclay.html">Université Paris-Saclay Evry</a>
     </p>
   </footer>
 </body>

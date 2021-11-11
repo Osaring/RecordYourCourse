@@ -76,7 +76,7 @@ stopRecordButton.addEventListener('click', () => {
     codecPreferences.disabled = false;
     recordInProgress.hidden = true;
     downloadRecordFormat.disabled = false;
-    downloadButton.click(); // download video
+      // downloadButton.click(); // download video
     startButtonEnabled();
 });
 function stopRecording() {

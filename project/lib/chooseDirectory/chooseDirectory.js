@@ -37,18 +37,14 @@ function createRepository(newDirectoryPath){
 
     // Create repo for new course
     fs.mkdirSync(path);
-    fs.mkdirSync(path + 'slides/');
 
-    // reste à copier les slides du xml ici
-
-    // Copy index.html & timesheet.smil from templateCourse into newCourse
+    // Copy templateCourse into new repo
+    fse.copySync(pathTemplateCourse + 'images/', path + 'images/');
+    fse.copySync(pathTemplateCourse + 'css/', path + 'css/');
+    fse.copySync(pathTemplateCourse + 'controls/', path + 'controls/');
     fs.copyFile(pathTemplateCourse + 'index.html', path + 'index.html', (err) => {
         if (err) throw err;
     })
-    fs.copyFile(pathTemplateCourse + 'timesheet.smil', path + 'timesheet.smil', (err) => {
-        if (err) throw err;
-    })
-    fse.copySync(pathTemplateCourse + '../../frontend/css/course/', path + 'css');
     return path;
 }
 
