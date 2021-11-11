@@ -47,17 +47,19 @@ Standards dédiées aux forums de discussion:
    * Si la personne qui vous aide ne trouve pas la solution, merci de ne pas l'insulter ou la
   critiquer. Par ailleurs, merci de ne pas donner la solution complète mais des pistes pour la
   trouver.
-   * En cas de question technique, je fournirai des détails du problème, une capture d'écran 
+   * En cas de question technique, je fournirai des détails du problème, une capture d'écran
   complète de l'erreur et du code complet (1 fichier, 1 partage) afin que les personnes qui pourraient aider puissent comprendre le problème. Pour partager du code j'utiliserai https://sharemycode.io/. Pas de captures d'écran de code sauf demande des modérateurs.
 
 Si vous voyez un message qui enfreint ces règles, ajoutez y une réaction :cartonjaune: pour prévenir les responsables. Merci
 
 ## Gouvernance du projet
 
-## Rôles des contributeurs
+## Rôles possibles des contributeurs
+
   * Responsable du projet
   * Responsable de la FAQ
-  * Responsable du forum de bogues
+  * Responsable du gestionnaire de bogues
+  * Responsable du code de conduite
   * Responsable de version
   * Contributeur
   * Commiter

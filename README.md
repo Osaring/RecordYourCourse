@@ -6,15 +6,14 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <p>
-    <img style="width:200px; height;70px;" src="./project/frontend/images/recordYourCourse.png">
-  </p>
-  <p align="center">
+    <img style="width:180px; height:70px;" src="./project/frontend/images/recordYourCourse.png">
   </p>
 </div>
 
+##
 
 <!-- TABLE OF CONTENTS -->
-<div>
+<details>
   <summary>Table des matières</summary>
   <ol></ol>
     <li>
@@ -35,16 +34,18 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Remerciements</a></li>
   </ol>
-</div>
+</details>
+
+##
 
 <!-- A PROPOS DU PROJET -->
 <div id="about-the-project"></div>
 
-## A propros du projet
+## 🌏 A propros du projet
 
-Ce projet consiste à créer un mini logiciel permettant d’enregistrer les cours des enseignants s’ils le souhaitent, et ceci permettra aux étudiants de visualiser les cours à distance en cas de besoin.
+Record Your Courses est un mini-logiciel permettant aux enseignants d’enregistrer leur cours s’ils le souhaitent. L'objectif principal est de donner la possibilité aux étudiants de pouvoir revisionner les cours afin de mieux les comprendre.
 
-L’enregistrement contiendra, la vidéo du professeur mais aussi le cours en question ainsi que sa table des matières qui permettra de se positionner pour regarder la partie qu’on souhaite de la vidéo.
+L’enregistrement contiendra, la vidéo avec les gestes du professeur, le diaporama présenté ainsi que la table des matières qui en cliquant dessus, déplacera la vidéo à la partie de la vidéo que l'on souhaite regarder.
 
 
 <div id="technos"></div>
@@ -58,27 +59,26 @@ L’enregistrement contiendra, la vidéo du professeur mais aussi le cours en qu
 <!-- LANCEMENT -->
 <div id="getting-started"></div>
 
-## Lancement du projet
+## ⚡️ Lancement du projet
 
-Il s'agit d'un exemple de la façon dont on peut installer ce projet localement.
-Pour mettre en place une copie locale et la faire fonctionner, il faut suivre les étapes ci-dessous.
+Pour créer une copie locale et essayer rapidement le projet, vous pouvez suivre les étapes décrites ci-dessous :
 
 <div id="prerequisites"></div>
 
 ### Prérequis
 
-* Installer nodejs
+* Avoir installé nodejs
   ```sh
   https://nodejs.org/en/download/
   ```
 
 <div id="installation"></div>
 
-### Installation
+### Installation & run
 
 1. Cloner le projet
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+    git clone https://github.com/your_username_/Project-Name.git
    ```
 2. Installer les modules NPM
    ```sh
@@ -88,7 +88,7 @@ Pour mettre en place une copie locale et la faire fonctionner, il faut suivre le
    ```sh
    npm run start
    ```
-4. En cas d'erreur, installer les modules manquants puis run (step 3)
+4. En cas d'erreur, installer les modules manquants puis recommancer l'étape 3
    ```sh
    npm i "nom module"
    ```
@@ -96,15 +96,14 @@ Pour mettre en place une copie locale et la faire fonctionner, il faut suivre le
 <!-- CONTRIBUTION -->
 <div id="contributing"></div>
 
-## Contribution
+## 👍 Contribuer au projet
 
 Pour contribuer au projet, des informations techniques sont détaillées dans le fichier `CONTRIBUTING.md`.
 
 Les contributions sont ce qui fait de la communauté open source un endroit extraordinaire pour apprendre, inspirer et créer. Toutes les contributions sont **grandement appréciées**.
 
-Si vous avez une suggestion qui permettrait d'améliorer ce produit, merci d'ouvrir le dépôt et de créer une demande de modification. Vous pouvez aussi simplement ouvrir un problème avec l'étiquette 
-"suggestion".
-N'oubliez pas de donner une étoile au projet ! Merci encore !
+Si vous avez une suggestion qui permettrait d'améliorer ce projet, merci d'ouvrir le dépôt et de créer une demande de modification. Vous pouvez aussi simplement ouvrir un problème avec l'étiquette "suggestion".
+Si vous avez aimé notre projet, n'hésitez pas à donner une star au projet ! Merci encore !
 
 1. Duppliquer le projet
 2. Créer votre propre branche (`git checkout -b feature/AmazingFeature`)
@@ -119,12 +118,15 @@ développeurs est requise pour être merge sur la branche principale.
 <!-- LICENCE -->
 <div id="license"></div>
 
-## Licence
+## 📝 Licence
 
-Ce projet est diffusé sous la licence GNU 3.
-Lire le fichier `LICENSE.txt` pour plus d'informations.
-
-
+GPL-3.0 is free and open-source software licensed.
+Vous pouvez trouvez plus d'informations dans `LICENSE.txt` ou bien en suivant ce lien https://www.gnu.org/licenses/gpl.html.
+<p style="text-align:center">
+  <a href="https://www.gnu.org/licenses/gpl.html">
+    <img style="width:100px; height;30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/1440px-GPLv3_Logo.svg.png">
+  </a>
+</p>
 <!-- CONTACT -->
 <div id="contact"></div>
 
@@ -137,7 +139,7 @@ Lien du projet : [https://github.com/Osaring/RecordYourCourse](https://github.co
 ## Remerciements
 <div id="acknowledgments"></div>
 
-Utilisez cet espace pour lister les ressources que vous trouvez utiles. Voici quelques-unes pour lancer les choses !
+Nous utilons cet espace pour lister les ressources que nous avons trouvé utiles.
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
