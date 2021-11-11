@@ -46,7 +46,7 @@ Record Your Course est volontairement très modulaire. Presque tous les élémen
 Pour avoir une idée des packages fournis avec Record Your Course, vous pouvez accéder à <Paramètres> Packages dans Record Your Course et consulter la section Packages de base.
 
 
-De plus, comme Record Your Course est si extensible, il est possible qu'une fonctionnalité à laquelle vous vous êtes habitué dans Record Your Course ou qu'un problème que vous rencontrez ne provienne pas du tout d'un package groupé, mais plutôt d'un package communautaire que vous avez installé. Chaque package communautaire a également son propre référentiel.
+git statDe plus, comme Record Your Course est si extensible, il est possible qu'une fonctionnalité à laquelle vous vous êtes habitué dans Record Your Course ou qu'un problème que vous rencontrez ne provienne pas du tout d'un package groupé, mais plutôt d'un package communautaire que vous avez installé. Chaque package communautaire a également son propre référentiel.
 
 
 ### Design de RecordYourCourse
