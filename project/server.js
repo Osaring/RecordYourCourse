@@ -16,6 +16,8 @@ function createWindow () {
       }
     });
     win.loadFile('./frontend/views/index.html');
+    //win.loadFile('./lib/templateCourse/index.html');
+
   } catch(error){
     console.log(error);
   }

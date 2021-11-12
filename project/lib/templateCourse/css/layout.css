@@ -86,13 +86,19 @@ div#images img {
   margin: 0;
   max-width: 24px !important;
   max-height: 24px !important;
-  background-image: url(../images/swap.png);
   background-position: center center;
   background-repeat: no-repeat;
+  background-color: rgb(156, 151, 151);
 }
-#swap span {
-  display: none;
+button#swap span {
+  color:white;
+  position: relative;
+  bottom: 5px;
 }
+button#swap span:hover {
+  opacity: 0.7;
+}
+
 div#images, video {
   transition         : all 1s;
   -o-transition      : all 1s;

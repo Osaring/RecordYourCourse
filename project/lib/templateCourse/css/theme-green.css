@@ -1,14 +1,14 @@
 #slideshow {
-    box-shadow         : 0px 1px 10px #422;
-    -o-box-shadow      : 0px 1px 10px #422;
-    -moz-box-shadow    : 0px 1px 10px #422;
-    -webkit-box-shadow : 0px 1px 10px #422;
+    box-shadow         : 0px 1px 10px #242;
+    -o-box-shadow      : 0px 1px 10px #242;
+    -moz-box-shadow    : 0px 1px 10px #242;
+    -webkit-box-shadow : 0px 1px 10px #242;
   }
   #slideshow, div.smil-toc {
-    background-color: #732d2d;
+    background-color: rgb(177, 202, 177);
   }
   .smil-controlBar {
-    background-color: #522;
+    background-color: rgb(119, 155, 119);
   }
   .smil-timeSegments a span {
     background-color: transparent;
@@ -16,13 +16,13 @@
     padding: 0;
   }
   .smil-timeSegments a:hover span, div.smil-toc ul a {
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
   }
   button,
   .smil-controlBar button,
   .smil-timeSegments a {
-    background-color: #944;
-    border-color: #722;
+    background-color: rgb(142, 189, 142);
+    border-color: rgb(121, 165, 121);
     color: white !important;
   }
   video, button:hover,
@@ -30,8 +30,9 @@
   .smil-controlBar button:hover,
   .smil-timeSegments a:hover,
   .smil-timeSegments a.current {
-    background-color: #b66;
+    background-color: rgb(177, 202, 177);
   }
   div.smil-toc li.current > a {
-    color: orange !important;
+    color: rgb(88, 86, 86) !important;
+
   }

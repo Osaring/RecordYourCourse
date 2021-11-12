@@ -2,7 +2,8 @@ const fs = require('fs');
 const { dirname } = require('path');
 const path = require('path');
 
-const chemin = __dirname + '/../../history/cours1/';
+const chemin = __dirname + '/../../history/cours1/'; // à modifier
+
 const clock = document.getElementById('timer');
 var hrs = 0, min = 0, sec = 0;
 var start = false;
@@ -35,7 +36,7 @@ document.addEventListener('keydown', (event) => {
   });
 
 function copyTemplateSmil(){
-    fs.copyFile(__dirname + '/../../lib/templateCourse/timesheet.smil', chemin + 'timesheet.smil', (err) => {
+    fs.copyFile(__dirname + '/../../lib/templateCourse/controls/timesheet.smil', chemin + 'timesheet.smil', (err) => {
         if (err) {
             alert("Le fichier generate template n'a pas été copié");
             throw err;
@@ -65,7 +66,7 @@ function add() {
 }
 
 function timer() {
-    t = setTimeout(add, 1000);
+    var t = setTimeout(add, 1000);
 }
 
 function addDiapo(){

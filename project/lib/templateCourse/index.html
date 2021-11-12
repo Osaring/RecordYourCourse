@@ -5,23 +5,24 @@
   <meta charset="UTF-8">
   <title> New course </title>
   <link rel="timesheet" href="controls/timesheet.smil">
+
   <link rel="stylesheet" type="text/css" href="css/layout.css">
+
   <link rel="alternate stylesheet" title="brown" type="text/css" href="css/theme-brown.css">
+  <link rel="alternate stylesheet" title="blue" type="text/css" href="css/theme-blue.css">
+  <link rel="alternate stylesheet" title="green" type="text/css" href="css/theme-green.css">
+  <link rel="alternate stylesheet" title="cream" type="text/css" href="css/theme-cream.css">
 
   <script type="text/javascript" src="controls/timesheets.js"></script>
   <script type="text/javascript" src="controls/timesheets-controls.js"></script>
-  <!-- conflicts with timesheets-controls.js, FIXME
-    <script type="text/javascript" src="../timesheets-navigation.js"></script>
-    -->
+
   <script type="text/javascript">
-    // <![CDATA[
     function setStyleSheet(select) {
       var i, a, title = select.options[select.selectedIndex].text;
       for (i = 0; (a = document.getElementsByTagName("link")[i]); i++)
         if (/style/.test(a.getAttribute("rel")) && a.getAttribute("title"))
           a.disabled = (a.getAttribute("title") != title);
     }
-    // ]]>
   </script>
   <style type="text/css">
     .smil-toc li ul {
@@ -32,17 +33,17 @@
     }
   </style>
 </head>
-<body>
+<body class="crossfade">
   <header>
     <div style="float: right;">
       <select onchange="setStyleSheet(this)">
-        <option> gray </option>
-        <option> brown </option>
-        <option> cream </option>
-        <option> green </option>
-        <option> blue </option>
+        <option>gray</option>
+        <option>brown</option>
+        <option>cream</option>
+        <option>green</option>
+        <option>blue</option>
       </select>
-      <span style="margin-left: 20px;">
+      <span style="margin-left:20px;">
         <a href="audio">audio</a> vidéo
       </span>
     </div>
@@ -50,12 +51,12 @@
     <p> Mr X, Université Paris-Saclay. </p>
   </header>
 
-  <div id="slideshow" class="cross-fade">
-    <button id="swap"><span style="color:black;">⤢</span></button>
-
+  <div id="slideshow">
+    <button id="swap"><span>⤢</span></button>
     <div id="images">
-      <img id="diapo01"  src="images/slide01.png">
-      <img id="diapo02"  src="images/slide02.png">
+      <img id="diapo01" src="images/dosbox.png">
+      <img id="diapo02" src="images/gnote.png">
+      <img id="diapo03" src="images/slide01.png">
     </div>
 
     <!-- <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay> -->
@@ -68,7 +69,8 @@
       <div class="smil-toc">
         <ul class="smil-tocList">
           <li><a href="#diapo01">Introduction</a></li>
-          <li><a href="#diapo02">1- Titre 1</a></li>
+          <li><a href="#diapo02">1 - Titre 1</a></li>
+          <li><a href="#diapo03">2 - Titre 2</a></li>
         </ul>
       </div>
 
@@ -92,7 +94,7 @@
 
   <footer>
     <p>
-      Cours <a href="#">xxxxxxx</a> du MM octobre YYYY
+      Cours <a href="https://www.univ-evry.fr/accueil.html">Université d'Evry</a> - 16 novembre 2021
     </p>
     <p>
       Post-production : M2 MIAGE
