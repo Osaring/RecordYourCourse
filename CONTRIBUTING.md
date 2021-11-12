@@ -3,8 +3,9 @@
 :+1::tada: Tout d'abord, merci d'avoir pris le temps de contribuer ! :tada::+1:
 
 Ce qui suit est un ensemble de directives pour contribuer à Record Your Courses, qui sont hébergés dans l'organisation RecordYourCourses (https://github.com/Osaring/RecordYourCourses) sur GitHub. Ce sont principalement des lignes directrices, pas des règles. Faites preuve de bon sens et n'hésitez pas à proposer des modifications à ce document dans une pull request.
-
+p
 #### Table des matières
+
 
 [Code de conduite](#code-of-conduct)
 
@@ -132,7 +133,7 @@ Objectif des pull request :
 * Use the present tense ("Add feature" not "Added feature")
 * Limiter le message du commit à 72 caractères au plus
 * Référencer les libellés des issues et des pull requests
-* Quand vous modifier uniquemet la documentaition, incluer `[ci skip]` dans le titre du commit
+* Quand vous modifier uniquemet la documentation, incluer `` dans le titre du commit
 * Si possible, commencer le début d'un message de commit avec une emoji :
     * :art: `:art:` when improving the format/structure of the code
     * :racehorse: `:racehorse:` when improving performance
