@@ -1,6 +1,6 @@
 # Code de conduite des contribteurs
 
-## Notre engagement
+## 👊 Notre engagement
 
 En tant que membres, contributeurs et dirigeants, nous nous engageons à faire participer notre communauté, une expérience sans harcèlement pour tous, quel que soit l'âge ou le sexe.
 La communauté est une expérience exempte de harcèlement pour tous, indépendamment de l'âge, de la
@@ -30,7 +30,7 @@ Exemples de comportements à éviter:
 * Tout autre comportement qui pourrait raisonnablement être considéré comme inapproprié dans un
   cadre professionnel.
 
-Standards dédiées aux forums de discussion:
+Standards dédiés aux forums de discussion:
    * Ne pas contacter les membres par message personnel pour des demandes d'aide ou renseignements.
    * Choisir le topic en fonction du sujet de la question.
    *  Ne pas mentionner de personnes lors des questions, d'autres utilisateurs peuvent répondre et
@@ -85,7 +85,7 @@ Toutes les plaintes seront examinées rapidement et équitablement.
 Tous les dirigeants communautaires sont tenus de respecter la confidentialité et la sécurité des
 signaleurs de tout incident.
 
-## Les sanctions
+## 🌊 Les sanctions
 
 Les dirigeants de la communauté suivront ces directives pour déterminer les conséquences de toute action qu'ils considèrent comme une violation du présent code de conduite :
 ### 1. Correction
