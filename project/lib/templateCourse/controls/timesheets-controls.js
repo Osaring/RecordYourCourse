@@ -585,7 +585,7 @@
       setTimeout(parseAllTimeControllers, 500);
     }); else
       parseAllTimeControllers();
-    
+
     document.redrawTimelines = function() {
       var containers = document.getTimeContainersByTagName("*");
       for (var i = 0; i < containers.length; i++) {
@@ -598,5 +598,5 @@
         }
       }
     };
-    
+
     })();

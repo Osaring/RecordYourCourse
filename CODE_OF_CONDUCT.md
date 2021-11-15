@@ -1,6 +1,6 @@
 # Code de conduite des contribteurs
 
-## Notre engagement
+## 👊 Notre engagement
 
 En tant que membres, contributeurs et dirigeants, nous nous engageons à faire participer notre communauté, une expérience sans harcèlement pour tous, quel que soit l'âge ou le sexe.
 La communauté est une expérience exempte de harcèlement pour tous, indépendamment de l'âge, de la
@@ -30,7 +30,7 @@ Exemples de comportements à éviter:
 * Tout autre comportement qui pourrait raisonnablement être considéré comme inapproprié dans un
   cadre professionnel.
 
-Standards dédiées aux forums de discussion:
+Standards dédiés aux forums de discussion:
    * Ne pas contacter les membres par message personnel pour des demandes d'aide ou renseignements.
    * Choisir le topic en fonction du sujet de la question.
    *  Ne pas mentionner de personnes lors des questions, d'autres utilisateurs peuvent répondre et
@@ -47,17 +47,19 @@ Standards dédiées aux forums de discussion:
    * Si la personne qui vous aide ne trouve pas la solution, merci de ne pas l'insulter ou la
   critiquer. Par ailleurs, merci de ne pas donner la solution complète mais des pistes pour la
   trouver.
-   * En cas de question technique, je fournirai des détails du problème, une capture d'écran 
+   * En cas de question technique, je fournirai des détails du problème, une capture d'écran
   complète de l'erreur et du code complet (1 fichier, 1 partage) afin que les personnes qui pourraient aider puissent comprendre le problème. Pour partager du code j'utiliserai https://sharemycode.io/. Pas de captures d'écran de code sauf demande des modérateurs.
 
 Si vous voyez un message qui enfreint ces règles, ajoutez y une réaction :cartonjaune: pour prévenir les responsables. Merci
 
 ## Gouvernance du projet
 
-## Rôles des contributeurs
+## Rôles possibles des contributeurs
+
   * Responsable du projet
   * Responsable de la FAQ
-  * Responsable du forum de bogues
+  * Responsable du gestionnaire de bogues
+  * Responsable du code de conduite
   * Responsable de version
   * Contributeur
   * Commiter
@@ -83,7 +85,7 @@ Toutes les plaintes seront examinées rapidement et équitablement.
 Tous les dirigeants communautaires sont tenus de respecter la confidentialité et la sécurité des
 signaleurs de tout incident.
 
-## Les sanctions
+## 🌊 Les sanctions
 
 Les dirigeants de la communauté suivront ces directives pour déterminer les conséquences de toute action qu'ils considèrent comme une violation du présent code de conduite :
 ### 1. Correction
