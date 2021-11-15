@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title> New course </title>
+  <link rel="timesheet" href="controls/timesheet.smil">
+
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+  <link rel="alternate stylesheet" title="brown" type="text/css" href="css/theme-brown.css">
+  <link rel="alternate stylesheet" title="blue" type="text/css" href="css/theme-blue.css">
+  <link rel="alternate stylesheet" title="green" type="text/css" href="css/theme-green.css">
+  <link rel="alternate stylesheet" title="cream" type="text/css" href="css/theme-cream.css">
+
+  <script type="text/javascript" src="controls/timesheets.js"></script>
+  <script type="text/javascript" src="controls/timesheets-controls.js"></script>
+
+  <script type="text/javascript">
+    function setStyleSheet(select) {
+      var i, a, title = select.options[select.selectedIndex].text;
+      for (i = 0; (a = document.getElementsByTagName("link")[i]); i++)
+        if (/style/.test(a.getAttribute("rel")) && a.getAttribute("title"))
+          a.disabled = (a.getAttribute("title") != title);
+    }
+  </script>
+  <style type="text/css">
+    .smil-toc li ul {
+      display: none;
+    }
+    .smil-toc li.current ul {
+      display: block;
+    }
+  </style>
+</head>
+<body class="crossfade">
+  <header>
+    <div style="float: right;">
+      <select onchange="setStyleSheet(this)">
+        <option>gray</option>
+        <option>brown</option>
+        <option>cream</option>
+        <option>green</option>
+        <option>blue</option>
+      </select>
+      <span style="margin-left:20px;">
+        <a href="audio">audio</a> vidéo
+      </span>
+    </div>
+    <h1> DLL 5 - Record Your Course. </h1>
+    <p> Mr X, Université Paris-Saclay. </p>
+  </header>
+
+  <div id="slideshow">
+    <button id="swap"><span>⤢</span></button>
+    <div id="images">
+      <img id="diapo01" src="images/dosbox.png">
+      <img id="diapo02" src="images/gnote.png">
+      <img id="diapo03" src="images/slide01.png">
+    </div>
+
+    <!-- <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay> -->
+    <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay>
+      <source type="video/webm" src="video.webm"/>
+    </video>
+
+    <nav id="timeController">
+      <!-- Table of Contents -->
+      <div class="smil-toc">
+        <ul class="smil-tocList">
+          <li><a href="#diapo01">Introduction</a></li>
+          <li><a href="#diapo02">1 - Titre 1</a></li>
+          <li><a href="#diapo03">2 - Titre 2</a></li>
+        </ul>
+      </div>
+
+      <!-- timeline + control buttons -->
+      <div class="smil-controlBar">
+        <div class="smil-left">
+          <button class="smil-first"><span>|«</span></button>
+          <button class="smil-prev"><span>«</span></button>
+          <button class="smil-play"><span>▶||</span></button>
+          <button class="smil-next"><span>»</span></button>
+          <button class="smil-last"><span>»|</span></button>
+        </div>
+        <div class="smil-timeline">
+          <div class="smil-timeSegments"></div>
+          <div class="smil-timeCursor"></div>
+        </div>
+        <div class="smil-right smil-currentTime">0:00:00</div>
+      </div>
+    </nav>
+  </div>
+
+  <footer>
+    <p>
+      Cours <a href="https://www.univ-evry.fr/accueil.html">Université d'Evry</a> - 16 novembre 2021
+    </p>
+    <p>
+      Post-production : M2 MIAGE
+      — Synchronisation : <a
+      href="http://wam.inrialpes.fr/timesheets/">timesheets.js</a>
+      — © 2021 <a href="https://www.univ-evry.fr/universite/luniversite-paris-saclay.html">Université Paris-Saclay Evry</a>
+    </p>
+  </footer>
+</body>
+</html>

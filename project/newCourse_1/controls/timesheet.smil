@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timesheet xmlns="http://www.w3.org/ns/SMIL">
+
+  <!-- slideshow -->
+  <excl timeAction="intrinsic" dur="0:00:10"
+        mediaSync="#talk" controls="#timeController" navigation="arrows; hash">
+    <item select="#diapo01" begin="0:00:00"/>
+    <item select="#diapo02" begin="0:00:05"/>
+    <item select="#diapo03" begin="0:00:08"/>
+  </excl>
+
+  <!-- swap video and slideshow -->
+  <par timeAction="class:swapped">
+    <item select="body" begin="swap.click" end="swap.click"/>
+  </par>
+
+</timesheet>
