@@ -188,3 +188,4 @@ function startButtonDisabled(){
 function startButtonEnabled(){
   startRecord.disabled = false;
 }
+

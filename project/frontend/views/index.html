@@ -43,9 +43,11 @@
     <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 
-    <!-- Input for javascript  -->
-    <button id="test">test</button>
-    <!-- input for import file -->
+    <!-- Input for train smil  -->
+    <!-- <button id="test">test</button> -->
+
+    <!-- Input used in javascript  -->
+    <!-- input for importFile file -->
     <input type="file" id="inputChooseFile" hidden>
     <!-- input for choosePath file -->
     <input type="file" id="inputChoosePath" hidden>
@@ -68,8 +70,8 @@
         <div>
           > Cliquer sur le bouton ci-dessous commencer un enregistrement.
           <br>
-          <button class="generate" id="generate">Générer SMIL</button>
-          <h3 id='timer'><time>00:00:00</time></h3>
+          <!-- <button class="generate" id="generate">Générer SMIL</button> -->
+          <!-- <h3 id='timer'><time>00:00:00</time></h3> -->
           <button class="btn-start" id="button-start-record">Enregistrer un cours</button>
           <br>
         </div>
@@ -124,6 +126,23 @@
         <hr style="width:50px;border:5px solid red" class="w3-round">
       </div>
 
+      <!-- load video -->
+      <div class="w3-container">
+        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:15px"><b>Load video.</b></h2> <!-- <i class="fa fa-spinner"></i> -->
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <div>
+            <button class="btn-load-course" id="load-course">Sélectionner le fichier html</button>
+            <input type="file" id="inputLoadCourse" hidden>
+          </div>
+        </div>
+      </div>
+
+      <!-- W3.CSS Container -->
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
+
+
       <!-- Videos saved-->
       <div class="w3-row-padding w3-grayscale" style="margin-top:3%">
         <div class="w3-col m4 w3-margin-bottom">
@@ -165,7 +184,7 @@
       <div class="w3-container" id="contact" style="margin-top:20px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+        <p>Do you want us to style your home ? Fill out the form and fill me in with the details :)</p>
         <form action="/action_page.php" target="_blank">
           <div class="w3-section">
             <label>Name</label>
@@ -204,7 +223,8 @@
     <script type="module" src="../../lib/importFile/importPPT.js"></script>
     <script type="module" src="../../lib/chooseDirectory/chooseDirectory.js"></script>
     <script type="module" src="../../lib/modifyTemplateCourse/modifyIndex.js"></script>
-    <script type="module" src="../../lib/generate/generateSMIL.js"></script>
+    <!-- <script type="module" src="../../lib/generate/generateSMIL.js"></script> -->
+    <script type="module" src="../../lib/loadCourse/loadCourse.js"></script>
 
   </body>
 </html>

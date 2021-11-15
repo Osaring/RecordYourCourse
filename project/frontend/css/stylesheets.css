@@ -73,6 +73,26 @@ span {
 }
 
 
+.btn-load-course {
+    background: #f44434;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 14px;
+    justify-content: space-between;
+    margin-right:auto;
+    margin-left:auto;
+}
+.btn-load-course:hover{
+    opacity:0.7;
+}
+
 h2 {
     font-size: 36px;
 }
