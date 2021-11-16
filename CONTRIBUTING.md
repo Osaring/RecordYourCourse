@@ -1,6 +1,6 @@
 # Contibuer au projet Record You Courses
 
-:+1::tada: Tout d'abord, merci d'avoir pris le temps de contribuer ! :tada::+1:
+:+1::tada: Tout d'abord, merci d'avoir pris le tgit tasemps de contribuer ! :tada::+1:
 
 Ce qui suit est un ensemble de directives pour contribuer à Record Your Courses, qui sont hébergés dans l'organisation RecordYourCourses (https://github.com/Osaring/RecordYourCourses) sur GitHub. Ce sont principalement des lignes directrices, pas des règles. Faites preuve de bon sens et n'hésitez pas à proposer des modifications à ce document dans une pull request.
 p
