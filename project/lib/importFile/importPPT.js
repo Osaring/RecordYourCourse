@@ -2,7 +2,7 @@ var fs = require('fs');
 
 function importPresentation(choosePathDirectory) {
     return new Promise((resolve, reject) => {
-        // alert("Sélectionner le PowerPoint que vous voulez présenter.")
+        alert("Sélectionner le PowerPoint que vous voulez présenter.")
         document.getElementById('inputChooseFile').click();
         document.getElementById('inputChooseFile').addEventListener('change', (e) => {
             if (e.target.files) {

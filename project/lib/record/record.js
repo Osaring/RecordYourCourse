@@ -27,6 +27,7 @@ startRecord.addEventListener('click', async () => {
 });
 
 async function beginRecord(){
+
   await chooseDirectory().then( responseChooseDirectory => {
     if (responseChooseDirectory === "") {
       startButtonEnabled();

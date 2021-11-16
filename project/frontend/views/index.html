@@ -29,8 +29,9 @@
       <div class="w3-bar-block">
         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
         <a href="#commandes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Commandes<samp></samp></a>
-        <a href="#videos-saved" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cours enregistrées</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+        <a href="#visionner-cours" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Visionner un cours</a>
+        <a href="#videos-saved" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cours enregistrés</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contactez RYC</a>
       </div>
     </nav>
 
@@ -84,19 +85,18 @@
         <!-- echo cancellation -->
         <div>
           <div>
-            <h5>Media Stream Constraints options</h5>
-            <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+            <h5>Options multimédia</h5>
+            <p>Arrêter l'echo : <input type="checkbox" id="echoCancellation"></p>
           </div>
           <div>
               <span id="errorMsg"></span>
           </div>
         </div>
-
       </div>
 
       <!-- Arrêter -->
       <div class="w3-container">
-        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:15px"><b><i class="fa fa-stop-circle-o"></i> Arrêter.</b></h2>
+        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:8px"><b><i class="fa fa-stop-circle-o"></i> Arrêter.</b></h2>
       </div>
       <div class="w3-row-padding">
         <div class="w3-half">
@@ -106,7 +106,6 @@
             <button class="btn-stop" id="download" disabled>Télécharger</button>
           </div>
           <br>
-
           <div>
             <div class="btn-download-record-format" id="download-record-format" disabled>
               <h5>Sélectionner le format pour la vidéo :</h5>
@@ -118,38 +117,41 @@
       </div>
 
       <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
 
       <!-- Header -->
       <div class="w3-container" style="margin-top:20px" id="#">
-        <h1 id="videos-saved" class="w3-xxxlarge w3-text-red"><b>Cours enregistrés.</b></h1>
+        <h1 id="visionner-cours" class="w3-xxxlarge w3-text-red"><b>Visioner un cours.</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
       </div>
-
       <!-- load video -->
       <div class="w3-container">
-        <h2 class="w3-xxxlarge w3-text-black" style="margin-top:15px"><b>Load video.</b></h2> <!-- <i class="fa fa-spinner"></i> -->
+        <div>> Cliquer sur le bouton ci-dessous pour lancer un fichier html.</div> <!-- <i class="fa fa-spinner"></i> -->
       </div>
       <div class="w3-row-padding">
         <div class="w3-half">
           <div>
-            <button class="btn-load-course" id="load-course">Sélectionner le fichier html</button>
+            <button class="btn-load-course" id="load-course">Sélectionner le fichier html d'un cours</button>
             <input type="file" id="inputLoadCourse" hidden>
           </div>
         </div>
       </div>
 
       <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
 
-
+      <!-- Header -->
+      <div class="w3-container" style="margin-top:20px" id="#">
+        <h1 id="videos-saved" class="w3-xxxlarge w3-text-red"><b>Cours enregistrés.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+      </div>
       <!-- Videos saved-->
       <div class="w3-row-padding w3-grayscale" style="margin-top:3%">
         <div class="w3-col m4 w3-margin-bottom">
           <div class="w3-light-grey">
-            <img src="" alt="John" style="width:100%">
+            <img src="" alt="Cours1" style="width:100%">
             <div class="w3-container">
-              <h3>John Doe</h3>
+              <h3>Cours 1</h3>
               <p class="w3-opacity">CEO & Founder</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             </div>
@@ -157,9 +159,9 @@
         </div>
         <div class="w3-col m4 w3-margin-bottom">
           <div class="w3-light-grey">
-            <img src="" alt="Jane" style="width:100%">
+            <img src="" alt="Cours2" style="width:100%">
             <div class="w3-container">
-              <h3>Jane Doe</h3>
+              <h3>Cours 2</h3>
               <p class="w3-opacity">Designer</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             </div>
@@ -167,9 +169,9 @@
         </div>
         <div class="w3-col m4 w3-margin-bottom">
           <div class="w3-light-grey">
-            <img src="" alt="Mike" style="width:100%">
+            <img src="" alt="Cours3" style="width:100%">
             <div class="w3-container">
-              <h3>Mike Ross</h3>
+              <h3>Cours 3</h3>
               <p class="w3-opacity">Architect</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             </div>
@@ -178,25 +180,25 @@
       </div>
 
       <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:15px;padding-right:58px;height:4px"></div>
+      <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px;height:4px"></div>
 
       <!-- Contact -->
       <div class="w3-container" id="contact" style="margin-top:20px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Contactez Record Your Courses.</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>Do you want us to style your home ? Fill out the form and fill me in with the details :)</p>
+        <p>Vous pouvez contacter les contributeurs du projet</p>
         <form action="/action_page.php" target="_blank">
           <div class="w3-section">
-            <label>Name</label>
-            <input class="w3-input w3-border" type="text" name="Name" required>
+            <label>om</label>
+            <input class="w3-input w3-border" type="text" name="Name" placeholder="Votre nom..." required>
           </div>
           <div class="w3-section">
             <label>Email</label>
-            <input class="w3-input w3-border" type="text" name="Email" required>
+            <input class="w3-input w3-border" type="text" name="Email" placeholder="Votre email..." required>
           </div>
           <div class="w3-section">
             <label>Message</label>
-            <input class="w3-input w3-border" type="text" name="Message" required>
+            <textarea class="w3-input w3-border" type="text" name="Message" required></textarea>
           </div>
           <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Envoyer votre Message</button>
         </form>
@@ -204,7 +206,7 @@
     </div>
 
     <!-- W3.CSS Container -->
-    <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:50px;padding-right:58px"><p class="w3-right">Logiciel créé par <a href="" title="" target="_blank" class="w3-hover-opacity">des étudiants en M2 MIAGE</a></p></div>
+    <div class="w3-light-grey w3-container w3-padding-16" style="margin-top:30px;padding-right:58px"><p class="w3-right">Logiciel créé par <a href="" title="" target="_blank" class="w3-hover-opacity">des étudiants en M2 MIAGE</a></p></div>
 
     <script>
       // Script to open and close sidebar

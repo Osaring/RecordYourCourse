@@ -3,7 +3,7 @@ const fse = require('fs-extra');
 
 function chooseDirectory() {
     return new Promise((resolve, reject) => {
-        alert("Sélectionner un fichier situé à l'endroit où vous voulez enregistrer le cours.")
+        // alert("Sélectionner un fichier situé à l'endroit où vous voulez enregistrer le cours.")
         document.getElementById('inputChoosePath').click();
         document.getElementById('inputChoosePath').addEventListener('change', (e) => {
             if (e.target.files) {
