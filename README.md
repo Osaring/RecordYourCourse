@@ -92,6 +92,7 @@ Pour créer une copie locale et essayer rapidement le projet, vous pouvez suivre
 4. En cas d'erreur, installer les modules manquants puis recommancer l'étape 3
    ```sh
    npm i "nom module"
+   Exemples : npm i electron ; npm i eslint
    ```
 
 <!-- CONTRIBUTION -->
