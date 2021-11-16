@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/layout.css">
 
+  <link rel="alternate stylesheet" title="gray" type="text/css" href="css/theme-gray.css">
   <link rel="alternate stylesheet" title="brown" type="text/css" href="css/theme-brown.css">
   <link rel="alternate stylesheet" title="blue" type="text/css" href="css/theme-blue.css">
   <link rel="alternate stylesheet" title="green" type="text/css" href="css/theme-green.css">
@@ -20,7 +21,7 @@
     function setStyleSheet(select) {
       var i, a, title = select.options[select.selectedIndex].text;
       for (i = 0; (a = document.getElementsByTagName("link")[i]); i++)
-        if (/style/.test(a.getAttribute("rel")) && a.getAttribute("title"))
+        if (/alternate stylesheet/.test(a.getAttribute("rel")) && a.getAttribute("title"))
           a.disabled = (a.getAttribute("title") != title);
     }
   </script>
@@ -54,9 +55,9 @@
   <div id="slideshow">
     <button id="swap"><span>⤢</span></button>
     <div id="images">
-      <img id="diapo01" src="images/dosbox.png">
-      <img id="diapo02" src="images/gnote.png">
-      <img id="diapo03" src="images/slide01.png">
+      <img id="diapo01" src="images/slide01.png">
+      <img id="diapo02" src="images/slide02.png">
+      <img id="diapo03" src="images/slide03.png">
     </div>
 
     <!-- <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay> -->
@@ -83,7 +84,7 @@
           <button class="smil-next"><span>»</span></button>
           <button class="smil-last"><span>»|</span></button>
         </div>
-        <div class="smil-timeline">
+        <div class="smil-timeline" hidden>
           <div class="smil-timeSegments"></div>
           <div class="smil-timeCursor"></div>
         </div>

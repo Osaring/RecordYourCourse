@@ -6,6 +6,7 @@
 }
 #slideshow, div.smil-toc {
   background-color: #732d2d;
+  color: white;
 }
 .smil-controlBar {
   background-color: #522;
@@ -14,6 +15,7 @@
   background-color: transparent;
   margin-top: 0;
   padding: 0;
+  color: white;
 }
 .smil-timeSegments a:hover span, div.smil-toc ul a {
   color: rgb(0, 0, 0) !important;
@@ -23,7 +25,7 @@ button,
 .smil-timeSegments a {
   background-color: #944;
   border-color: #722;
-  color: rgb(112, 109, 109) !important;
+  color: rgb(255, 255, 255) !important;
 }
 video, button:hover,
 .smil-timeSlider,
@@ -33,5 +35,8 @@ video, button:hover,
   background-color: #b66;
 }
 div.smil-toc li.current > a {
-  color: rgb(88, 86, 86) !important;
+  color: rgb(161, 158, 158) !important;
+}
+div.smil-toc li > a {
+  color: white !important;
 }

@@ -30,6 +30,7 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#reprendre-le-projet">Duppliquer/Reprendre le projet</a></li>
     <li><a href="#license">Licence</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Remerciements</a></li>
@@ -114,6 +115,14 @@ Si vous avez aimé notre projet, n'hésitez pas à donner une star au projet ! M
 Votre code sera examiné le plus rapidement par les développeurs, une validation par au-moins deux
 développeurs est requise pour être merge sur la branche principale.
 
+<!-- FORK LE PROJET -->
+<div id="reprendre-le-projet"></div>
+
+## 👍 Duppliquer/Repprendre le projet
+
+En plus de pouvoir contribuer directement à ce projet, vous avez la possibilité de duppliquer le projet pour modifier/utiliser/diffuser le projet comme vous le souhaitez.
+Pour duppliquer le projet sur votre répertoire personnel, vous pouvez cliquer en haut à droite du projet sur GitHub.
+Attention cependant, toutes les versions créées doivent être diffusées sous la même licence que ce projet, que vous pourrez trouver ci-dessous.
 
 <!-- LICENCE -->
 <div id="license"></div>
