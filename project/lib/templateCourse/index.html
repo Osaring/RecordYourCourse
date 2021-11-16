@@ -55,9 +55,9 @@
   <div id="slideshow">
     <button id="swap"><span>⤢</span></button>
     <div id="images">
-      <img id="diapo01" src="images/slide01.png">
-      <img id="diapo02" src="images/slide02.png">
-      <img id="diapo03" src="images/slide03.png">
+      <img id="diapo01" src="">
+      <img id="diapo02" src="">
+      <img id="diapo03" src="images/slide01.png">
     </div>
 
     <!-- <video id="talk" width="320" height="240" poster="images/poster-video.jpg" autoplay> -->
@@ -78,11 +78,11 @@
       <!-- timeline + control buttons -->
       <div class="smil-controlBar">
         <div class="smil-left">
-          <button class="smil-first"><span>|«</span></button>
-          <button class="smil-prev"><span>«</span></button>
+          <button id="smil-first" class="smil-first"><span>|«</span></button>
+          <button id="smil-prev" class="smil-prev"><span>«</span></button>
           <button class="smil-play"><span>▶||</span></button>
-          <button class="smil-next"><span>»</span></button>
-          <button class="smil-last"><span>»|</span></button>
+          <button id="smil-next" class="smil-next"><span>»</span></button>
+          <button id="smil-last" class="smil-last"><span>»|</span></button>
         </div>
         <div class="smil-timeline" hidden>
           <div class="smil-timeSegments"></div>
@@ -104,5 +104,8 @@
       — © 2021 <a href="https://www.univ-evry.fr/universite/luniversite-paris-saclay.html">Université Paris-Saclay Evry</a>
     </p>
   </footer>
+
+  <script type="text/javascript" src="controls/changeSlide.js"></script>
+
 </body>
 </html>

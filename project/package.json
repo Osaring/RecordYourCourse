@@ -18,6 +18,6 @@
   "homepage": "https://github.com/Osaring/RecordYourCourse#readme",
   "dependencies": {
     "electron": "^15.1.2",
-    "nodemon": "^2.0.13"
+    "eslint": "^8.2.0"
   }
 }
