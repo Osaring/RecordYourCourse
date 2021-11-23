@@ -27,6 +27,8 @@
       <ul>
         <li><a href="#prerequisites">Prérequis</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#utilisation">Installation</a></li>
+
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -85,15 +87,39 @@ Pour créer une copie locale et essayer rapidement le projet, vous pouvez suivre
    ```sh
    npm install
    ```
-3. Exécuter
+3. Se déplacer dans le bon répertoire
+   ```sh
+   cd ./project
+   ```
+4. Exécuter
    ```sh
    npm run start
    ```
-4. En cas d'erreur, installer les modules manquants puis recommancer l'étape 3
+5. En cas d'erreur, installer les modules manquants puis recommancer l'étape 3
    ```sh
    npm i "nom module"
    Exemples : npm i electron ; npm i eslint
    ```
+
+Le logiciel est maintenant lancé et le frontend s'affiche.
+
+
+<div id="utilisation"></div>
+
+### Utilisation du logiciel
+
+
+Vous pouvez maintenant utiliser les fonctionnalités du logiciel. Pour cela, rendez-vous dans l'espace "Commandes" :
+* bouton enregistrer un cours
+  - sélectionner un fichier à l'endroit où vous voulez enregistrer le cours
+  (s'il ne passe rien relancer le logiciel)
+  - une deuxième fenêtre s'affiche, sélectionner le PowerPoint que vous voulez présenter
+  - l'enregistrement de l'audio, de la caméra, et des changements de slide est opérationnel
+* bouton arrêter l'enregistrement d'un cours
+  - vous devez ensuite télécharger la vidéo dans le répertoire "NewCourse" avec comme nom de fichier  "video.webm"
+* bouton afficher un cours sur une page web
+  - sélectionner le fichier "index.html" situé dans le répertoire du cours
+
 
 <!-- CONTRIBUTION -->
 <div id="contributing"></div>
